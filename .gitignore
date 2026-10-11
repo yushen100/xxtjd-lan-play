@@ -1,0 +1,31 @@
+# 私有仓库：除登录凭据和缓存外全部上传。
+# —— 登录凭据（4399 账号 cookie/LocalStorage、浏览器配置、Codex/MCP 配置）：上传会泄露账号，不上传 ——
+cookies.dat
+LocalStorage/
+/tools/chrome-profile/
+/.codex/
+/drafts/1009_MCP配置备份_v1/
+# —— 可重建的缓存 ——
+/tools/npm-cache/
+/tools/pip-cache/
+__pycache__/
+*.pyc
+# —— 运行中的数据库临时文件（数据库本身会上传）——
+*.sqlite3-wal
+*.sqlite3-shm
+
+# 分卷通过 Release 备份，避免再次进入 Git 批量上传。
+/drafts/1011_GitHub分卷备份_v1/
+drafts/1010_本地私服_v1/自动备份/
+
+# 独立验收和部署二进制放在本地或 Release，不进入 Git。
+/drafts/1011_可靠性改造原件_v1/
+/drafts/1011_可靠性验收_v1/
+/drafts/1011_百人承载验收_v1/
+/drafts/1011_换目录启动验收_v1/
+/drafts/1011_部署包_v1/
+/drafts/1011_运行配置_v1.json
+/tools/python/
+/tools/1011_github_cli_v1/
+/assets/1011_部署依赖_v1/
+/memory/1011_验收执行_v1/

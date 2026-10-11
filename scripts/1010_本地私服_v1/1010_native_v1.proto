@@ -1,0 +1,4843 @@
+syntax = "proto2";
+package localprotocol;
+message Request {
+optional LoginRequest loginRequest = 1;
+optional BattleSyncRequest battleSyncRequest = 2;
+optional BattleLoginRequest battleLoginRequest = 3;
+optional BattleSelHeroRequest battleSelHeroRequest = 4;
+optional BattleLoadingRequest battleLoadingRequest = 5;
+optional TeamCreateRequest teamCreateRequest = 6;
+optional BattleEndRequest battleEndRequest = 7;
+optional HeroBuyRequest heroBuyRequest = 8;
+optional SkinBuyRequest skinBuyRequest = 9;
+optional MedalDrawRequest medalDrawRequest = 10;
+optional MedalBuyRequest medalBuyRequest = 11;
+optional MedalAdornBuyRequest medalAdornBuyRequest = 12;
+optional MedalUpRequest medalUpRequest = 13;
+optional MedalDownRequest medalDownRequest = 14;
+optional MedalOpenPageRequest medalOpenPageRequest = 15;
+optional MedalSkillActiveRequest medalSkillActiveRequest = 18;
+optional MedalSkillEquipRequest medalSkillEquipRequest = 19;
+optional MedalAllDownRequest medalAllDownRequest = 20;
+optional MedalSellRequest medalSellRequest = 21;
+optional MedalSellBatchRequest medalSellBatchRequest = 22;
+optional FriendAddSearchRequest friendAddSearchRequest = 23;
+optional FriendApplyRequest friendApplyRequest = 24;
+optional FriendReplyRequest friendReplyRequest = 25;
+optional FriendDeleteRequest friendDeleteRequest = 26;
+optional ArenaSubRankListRequest arenaSubRankListRequest = 27;
+optional ArenaSubRankRequest arenaSubRankRequest = 28;
+optional TeamJoinRequest teamJoinRequest = 29;
+optional TeamApplyRequest teamApplyRequest = 30;
+optional TeamRefuseRequest teamRefuseRequest = 31;
+optional NameSetRequest nameSetRequest = 32;
+optional FCMSetRequest fCMSetRequest = 33;
+optional RankListRequest rankListRequest = 34;
+optional BattleServerBattleEndRequest battleServerBattleEndRequest = 35;
+optional MailReadRequest mailReadRequest = 36;
+optional MailRewardRequest mailRewardRequest = 37;
+optional MailDelRequest mailDelRequest = 38;
+optional BattleStartRequest battleStartRequest = 39;
+optional AchievementRewardRequest achievementRewardRequest = 40;
+optional UserInfoBaseRequest userInfoBaseRequest = 41;
+optional UserInfoBattleRequest userInfoBattleRequest = 42;
+optional UserInfoScoreRequest userInfoScoreRequest = 43;
+optional UserInfoHeroRequest userInfoHeroRequest = 44;
+optional UserInfoBattleRecordRequest userInfoBattleRecordRequest = 45;
+optional ChatSendRequest chatSendRequest = 46;
+optional ChatListRequest chatListRequest = 47;
+optional TaskDailyRewardRequest taskDailyRewardRequest = 48;
+optional TaskWeeklyAcRewardRequest taskWeeklyAcRewardRequest = 49;
+optional GxGetRequest gxGetRequest = 50;
+optional ClientErrorRequest clientErrorRequest = 51;
+optional HeadImageChangeRequest headImageChangeRequest = 52;
+optional SkinEquipRequest skinEquipRequest = 53;
+optional ChatTextCheckRequest chatTextCheckRequest = 54;
+optional ExchangeCodeRequest exchangeCodeRequest = 55;
+optional ItemNumListRequest itemNumListRequest = 56;
+optional ItemNumRequest itemNumRequest = 57;
+optional HeadImageBuyRequest headImageBuyRequest = 58;
+optional ArmyCreateRequest armyCreateRequest = 59;
+optional ArmyJoinRequest armyJoinRequest = 60;
+optional ArmyKickRequest armyKickRequest = 61;
+optional ArmySearchRequest armySearchRequest = 62;
+optional ArmyListRequest armyListRequest = 63;
+optional HeadBoxChangeRequest headBoxChangeRequest = 64;
+optional ArmyRenameRequest armyRenameRequest = 65;
+optional ArmyRankIdSetRequest armyRankIdSetRequest = 66;
+optional ArmyCommanderSetRequest armyCommanderSetRequest = 67;
+optional ArmyTransferRequest armyTransferRequest = 68;
+optional ArmyNoticeSetRequest armyNoticeSetRequest = 69;
+optional ArmyChatInfoListRequest armyChatInfoListRequest = 70;
+optional ArmyRankListRequest armyRankListRequest = 71;
+optional ArmyRedSendRequest armyRedSendRequest = 72;
+optional ArmyDevoteSendRequest armyDevoteSendRequest = 73;
+optional ArmyDevoteRewardRequest armyDevoteRewardRequest = 74;
+optional ArmyRedGetRequest armyRedGetRequest = 75;
+optional ArmyRedInfoRequest armyRedInfoRequest = 76;
+optional ArmyShopBuyRequest armyShopBuyRequest = 77;
+optional ArmySetIconTextRequest armySetIconTextRequest = 78;
+optional LuckDrawRequest luckDrawRequest = 80;
+optional SkinBuyForFriendRequest skinBuyForFriendRequest = 81;
+optional BattleLikeRequest battleLikeRequest = 82;
+optional BattleReportRequest battleReportRequest = 83;
+optional ActionConditionListRequest actionConditionListRequest = 84;
+optional ActionConditionAwardRequest actionConditionAwardRequest = 85;
+optional FirstRechargeRewardRequest firstRechargeRewardRequest = 86;
+optional VipRewardRequest vipRewardRequest = 87;
+optional ChatReportRequest chatReportRequest = 88;
+optional SuiShopBuyRequest suiShopBuyRequest = 89;
+optional ChatBlackListAddRequest chatBlackListAddRequest = 90;
+optional ChatBlackListRemoveRequest chatBlackListRemoveRequest = 91;
+optional VipShowLevelSetRequest vipShowLevelSetRequest = 92;
+optional ChatBoxIdSetRequest chatBoxIdSetRequest = 93;
+optional HeroLuckDrawRequest heroLuckDrawRequest = 95;
+optional MonthCardBuyForFriendRequest monthCardBuyForFriendRequest = 97;
+optional ArmyRequestRequest armyRequestRequest = 98;
+optional ArmyRequestHelpRequest armyRequestHelpRequest = 99;
+optional ArmyRequestInfoRequest armyRequestInfoRequest = 100;
+optional TeamRobotAddRequest teamRobotAddRequest = 101;
+optional TeamRobotRemoveRequest teamRobotRemoveRequest = 102;
+optional TeamPosChangeRequest teamPosChangeRequest = 103;
+optional HeroBattleInfoRequest heroBattleInfoRequest = 104;
+optional HeroBattleRewardRequest heroBattleRewardRequest = 105;
+optional HeroBattleRankListRequest heroBattleRankListRequest = 106;
+optional BattleDelayRequest battleDelayRequest = 107;
+optional UserListRequest userListRequest = 108;
+optional QQAwardReceiveRequest qQAwardReceiveRequest = 109;
+optional ClientJsonGetQQAwardRequest clientJsonGetQQAwardRequest = 110;
+optional LimitDisBuyRequest limitDisBuyRequest = 111;
+optional WeAwardReceiveRequest weAwardReceiveRequest = 112;
+optional HeroUpgradeStarRequest heroUpgradeStarRequest = 113;
+optional ReceivePVEAwardRequest receivePVEAwardRequest = 114;
+optional DNDSetRequest dNDSetRequest = 115;
+optional PVEAwardInfoRequest pVEAwardInfoRequest = 116;
+optional HeroUpgradeStarQuickRequest heroUpgradeStarQuickRequest = 117;
+optional MedalRecommendRequest medalRecommendRequest = 118;
+optional MedalRecommendLookRequest medalRecommendLookRequest = 119;
+optional MedalRecommendLikeRequest medalRecommendLikeRequest = 120;
+optional MedalRecommendUnlikeRequest medalRecommendUnlikeRequest = 121;
+optional MedalRecommendFirstRequest medalRecommendFirstRequest = 122;
+optional MedalPageBindRequest medalPageBindRequest = 123;
+optional MedalAdornListRequest medalAdornListRequest = 124;
+optional BattleBanRequest battleBanRequest = 125;
+optional BattlePickRequest battlePickRequest = 126;
+optional BattlePreReadyRequest battlePreReadyRequest = 127;
+optional BattleHelpRequest battleHelpRequest = 129;
+optional BattleBanPickSwitchRequest battleBanPickSwitchRequest = 130;
+optional AchievementLevelAwardRequest achievementLevelAwardRequest = 131;
+optional AchievementLevelListRequest achievementLevelListRequest = 132;
+optional LuckRechargeRewardTakeRequest luckRechargeRewardTakeRequest = 133;
+optional CostSurprisesAwardRequest costSurprisesAwardRequest = 134;
+optional CrystalDrawRequest crystalDrawRequest = 135;
+optional BattleReLoginRequest battleReLoginRequest = 136;
+optional BattleFrameListRequest battleFrameListRequest = 137;
+optional UpOfficialRequest upOfficialRequest = 138;
+optional LevelAwardRequest levelAwardRequest = 141;
+optional SignTotalRewardRequest signTotalRewardRequest = 142;
+optional ActionBoxSlotOpenRequest actionBoxSlotOpenRequest = 143;
+optional ActionBoxPutInSlotRequest actionBoxPutInSlotRequest = 144;
+optional ActionBoxOpenRequest actionBoxOpenRequest = 145;
+optional GotoCompetitionFinalRequest gotoCompetitionFinalRequest = 147;
+optional CompetitionBetInfoRequest competitionBetInfoRequest = 148;
+optional CompetitionBetRequest competitionBetRequest = 149;
+optional CompetitionRandHeroRequest competitionRandHeroRequest = 150;
+optional CompetitionRankListRequest competitionRankListRequest = 151;
+optional InviteInviteeRewardTakeRequest inviteInviteeRewardTakeRequest = 152;
+optional InviteInvitorRewardLoginTakeRequest inviteInvitorRewardLoginTakeRequest = 153;
+optional InviteInvitorRewardBackNumTakeRequest inviteInvitorRewardBackNumTakeRequest = 154;
+optional InviteRechargeBackTakeRequest inviteRechargeBackTakeRequest = 155;
+optional InviteCodeBindRequest inviteCodeBindRequest = 156;
+optional CrystalShopBuyRequest crystalShopBuyRequest = 157;
+optional LuckTreeUseWaterRequest luckTreeUseWaterRequest = 158;
+optional HeroLotteryRewardRequest heroLotteryRewardRequest = 159;
+optional LuckTreeRankRequest luckTreeRankRequest = 160;
+optional TeamBeginMatchRequest teamBeginMatchRequest = 161;
+optional ArmyTaskRewardRequest armyTaskRewardRequest = 162;
+optional ArmyTaskWeeklyAcRewardRequest armyTaskWeeklyAcRewardRequest = 163;
+optional ArmyWarehouseRetrieveRequest armyWarehouseRetrieveRequest = 164;
+optional ArmyWarehouseDonateRequest armyWarehouseDonateRequest = 165;
+optional ArmyBossUpgradeRequest armyBossUpgradeRequest = 166;
+optional ArmyPlunderResurrectInfoRequest armyPlunderResurrectInfoRequest = 167;
+optional ArmyPlunderResurrectRequest armyPlunderResurrectRequest = 168;
+optional BattleBoxIntoSlotRequest battleBoxIntoSlotRequest = 169;
+optional BattleBoxAwardRequest battleBoxAwardRequest = 170;
+optional BattleBoxDeleteRequest battleBoxDeleteRequest = 171;
+optional BattleBoxSlotOpenRequest battleBoxSlotOpenRequest = 172;
+optional ChessboardDiceAwardRequest chessboardDiceAwardRequest = 173;
+optional HonorScoreQueryRequest honorScoreQueryRequest = 174;
+optional HonorScoreLogQueryRequest honorScoreLogQueryRequest = 175;
+optional VipStoneBuyRequest vipStoneBuyRequest = 176;
+optional VipStoneRewardTakeRequest vipStoneRewardTakeRequest = 177;
+optional FriendShopBuyRequest friendShopBuyRequest = 178;
+optional FriendSendCoinRequest friendSendCoinRequest = 179;
+optional FriendApplyRelationRequest friendApplyRelationRequest = 180;
+optional FriendDeleteRelationRequest friendDeleteRelationRequest = 181;
+optional FriendConfirmRefuseRelationshipRequest friendConfirmRefuseRelationshipRequest = 182;
+optional FriendReplyRelationRequest friendReplyRelationRequest = 183;
+optional LimitBoxBuyRequest limitBoxBuyRequest = 184;
+optional PassportBuyLevelRequest passportBuyLevelRequest = 185;
+optional PassportPromotionForFriendRequest passportPromotionForFriendRequest = 186;
+optional PassportShopBuyRequest passportShopBuyRequest = 187;
+optional PassportLvAwardQuickGetRequest passportLvAwardQuickGetRequest = 188;
+optional PassportGradeGetRequest passportGradeGetRequest = 189;
+optional HeroExclusiveExchangeRequest heroExclusiveExchangeRequest = 190;
+optional BattleBubbleEquipRequest battleBubbleEquipRequest = 191;
+optional BattleBubbleSaleRequest battleBubbleSaleRequest = 192;
+optional BattleBubbleUseRequest battleBubbleUseRequest = 193;
+optional HeadBoxBuyRequest headBoxBuyRequest = 194;
+optional ChatBoxBuyRequest chatBoxBuyRequest = 195;
+optional EveryChargeAwardRequest everyChargeAwardRequest = 196;
+optional EasyConvertRequest easyConvertRequest = 197;
+optional EventDataInfoRequest eventDataInfoRequest = 198;
+optional EventDrawRequest eventDrawRequest = 199;
+optional EventTaskTakeRequest eventTaskTakeRequest = 200;
+optional EventNoticeLogRequest eventNoticeLogRequest = 201;
+optional BattleLikeByRobotRequest battleLikeByRobotRequest = 202;
+optional BattleBubbleBuyRequest battleBubbleBuyRequest = 203;
+optional EmoticonBuyRequest emoticonBuyRequest = 204;
+optional EventNoviceAwardRequest eventNoviceAwardRequest = 205;
+optional ChipFuseConvertRequest chipFuseConvertRequest = 206;
+optional SeasonShopBuyRequest seasonShopBuyRequest = 207;
+optional CompetitionV2AwardRequest competitionV2AwardRequest = 208;
+optional AstrologyAwardRequest astrologyAwardRequest = 209;
+optional AstrologySetInfoRequest astrologySetInfoRequest = 210;
+optional AstrologyExchangeRequest astrologyExchangeRequest = 211;
+optional HeroAwakeLevelUpRequest heroAwakeLevelUpRequest = 212;
+optional StoreBuyRequest storeBuyRequest = 213;
+optional OnePayBuyRequest onePayBuyRequest = 214;
+optional AnniversaryDaysAwardRequest anniversaryDaysAwardRequest = 215;
+optional AnniversaryInfoRequest anniversaryInfoRequest = 216;
+optional FirstRechargeV2AwardRequest firstRechargeV2AwardRequest = 217;
+optional FriendHeroSetRequest friendHeroSetRequest = 218;
+optional FriendHeroBorrowRequest friendHeroBorrowRequest = 219;
+optional FriendPartnerApplyRequest friendPartnerApplyRequest = 220;
+optional FriendPartnerReplyRequest friendPartnerReplyRequest = 221;
+optional FriendTaskRewardRequest friendTaskRewardRequest = 222;
+optional PveBossPageInfoRequest pveBossPageInfoRequest = 223;
+optional PveBossRewardRequest pveBossRewardRequest = 224;
+optional ItemCostRequest itemCostRequest = 225;
+optional BattleExitRequest battleExitRequest = 226;
+optional ArmyShopInfoRequest armyShopInfoRequest = 227;
+optional ArmyShopPutRequest armyShopPutRequest = 228;
+optional TaskInfoRequest taskInfoRequest = 229;
+optional TaskRewardRequest taskRewardRequest = 230;
+optional GloryRoadRewardRequest gloryRoadRewardRequest = 231;
+optional RankStarUpRequest rankStarUpRequest = 232;
+optional ClientDebugRequest clientDebugRequest = 233;
+optional HeroResetProficiencyRequest heroResetProficiencyRequest = 234;
+optional HeroTalentInfoRequest heroTalentInfoRequest = 235;
+optional HeroTalentUseRequest heroTalentUseRequest = 236;
+optional HeroTalentLvUpRequest heroTalentLvUpRequest = 237;
+optional HeroTalentClearRequest heroTalentClearRequest = 238;
+optional ActivityOld2021GetRequest activityOld2021GetRequest = 239;
+}
+message Response {
+optional string errcode = 1;
+optional LoginResponse loginResponse = 2;
+optional BattleSyncResponse battleSyncResponse = 3;
+optional BattleBeginResponse battleBeginResponse = 4;
+optional BattleJoinResponse battleJoinResponse = 5;
+optional BattleReadyStatusResponse battleReadyStatusResponse = 6;
+optional BattleLoadingResponse battleLoadingResponse = 7;
+optional TeamListResponse teamListResponse = 8;
+optional MatchBattleInfoResponse matchBattleInfoResponse = 9;
+optional BattleEndResponse battleEndResponse = 10;
+optional HeroBuyResponse heroBuyResponse = 11;
+optional SkinBuyResponse skinBuyResponse = 12;
+optional MedalDrawResponse medalDrawResponse = 13;
+optional MedalBuyResponse medalBuyResponse = 14;
+optional MedalAdornListResponse medalAdornListResponse = 15;
+optional MedalAdornBuyResponse medalAdornBuyResponse = 16;
+optional MedalOpenPageResponse medalOpenPageResponse = 17;
+optional MedalSkillActiveResponse medalSkillActiveResponse = 20;
+optional MedalSkillEquipResponse medalSkillEquipResponse = 21;
+optional MedalDownResponse medalDownResponse = 22;
+optional MedalAllDownResponse medalAllDownResponse = 23;
+optional MedalSellResponse medalSellResponse = 24;
+optional MedalSellBatchResponse medalSellBatchResponse = 25;
+optional MedalUpResponse medalUpResponse = 26;
+optional OnlineDurationResponse onlineDurationResponse = 27;
+optional FriendListResponse friendListResponse = 28;
+optional FriendAddListResponse friendAddListResponse = 29;
+optional FriendAddSearchResponse friendAddSearchResponse = 30;
+optional FriendApplyListResponse friendApplyListResponse = 31;
+optional ArenaSubRankListResponse arenaSubRankListResponse = 32;
+optional ArenaSubRankResponse arenaSubRankResponse = 33;
+optional TeamByApplyResponse teamByApplyResponse = 34;
+optional TeamByRefuseResponse teamByRefuseResponse = 35;
+optional FCMSetResponse fCMSetResponse = 36;
+optional TeamCreateResponse teamCreateResponse = 37;
+optional RankListResponse rankListResponse = 38;
+optional RecentContactListResponse recentContactListResponse = 39;
+optional MailListResponse mailListResponse = 40;
+optional MailRewardResponse mailRewardResponse = 41;
+optional MailDelResponse mailDelResponse = 42;
+optional AchievementRewardResponse achievementRewardResponse = 43;
+optional AchievementListResponse achievementListResponse = 44;
+optional UserInfoBaseResponse userInfoBaseResponse = 45;
+optional UserInfoBattleResponse userInfoBattleResponse = 46;
+optional UserInfoScoreResponse userInfoScoreResponse = 47;
+optional UserInfoHeroResponse userInfoHeroResponse = 48;
+optional UserInfoBattleRecordResponse userInfoBattleRecordResponse = 49;
+optional ChatSendResponse chatSendResponse = 50;
+optional ChatListResponse chatListResponse = 51;
+optional ChatAsynResponse chatAsynResponse = 52;
+optional ChatPrivateRecentListResponse chatPrivateRecentListResponse = 53;
+optional SignListResponse signListResponse = 54;
+optional SignRewardResponse signRewardResponse = 55;
+optional TaskDailyRewardResponse taskDailyRewardResponse = 56;
+optional TaskWeeklyAcRewardResponse taskWeeklyAcRewardResponse = 57;
+optional TaskDailyListResponse taskDailyListResponse = 58;
+optional NoticeGetResponse noticeGetResponse = 59;
+optional GxGetResponse gxGetResponse = 60;
+optional HeartbeatResponse heartbeatResponse = 61;
+optional ChatTextCheckResponse chatTextCheckResponse = 62;
+optional ExchangeCodeResponse exchangeCodeResponse = 63;
+optional NameSetResponse nameSetResponse = 64;
+optional ItemNumListResponse itemNumListResponse = 65;
+optional ItemNumResponse itemNumResponse = 66;
+optional HeadImageBuyResponse headImageBuyResponse = 67;
+optional ArmyCreateResponse armyCreateResponse = 68;
+optional ArmyJoinResponse armyJoinResponse = 70;
+optional ArmySearchResponse armySearchResponse = 71;
+optional ArmyInfoResponse armyInfoResponse = 72;
+optional ArmyListResponse armyListResponse = 73;
+optional ArmyUserListResponse armyUserListResponse = 74;
+optional ArmyRenameResponse armyRenameResponse = 75;
+optional ArmyDevoteInfoResponse armyDevoteInfoResponse = 76;
+optional ArmyChatInfoListResponse armyChatInfoListResponse = 77;
+optional ArmyRankListResponse armyRankListResponse = 78;
+optional ArmyRedSendResponse armyRedSendResponse = 79;
+optional ArmyDevoteSendResponse armyDevoteSendResponse = 80;
+optional ArmyDevoteRewardResponse armyDevoteRewardResponse = 81;
+optional ArmyRedGetResponse armyRedGetResponse = 82;
+optional ArmyRedInfoResponse armyRedInfoResponse = 83;
+optional ArmyShopListResponse armyShopListResponse = 84;
+optional ArmyShopBuyResponse armyShopBuyResponse = 85;
+optional ArmyShopRefreshResponse armyShopRefreshResponse = 86;
+optional ArmyUserOnlineListResponse armyUserOnlineListResponse = 87;
+optional LuckInfoResponse luckInfoResponse = 88;
+optional LuckDrawResponse luckDrawResponse = 89;
+optional LuckRefreshResponse luckRefreshResponse = 90;
+optional LuckStartResponse luckStartResponse = 91;
+optional LuckBaoKuDrawResponse luckBaoKuDrawResponse = 92;
+optional LuckBroadcastResponse luckBroadcastResponse = 93;
+optional SkinBuyForFriendResponse skinBuyForFriendResponse = 94;
+optional BattleStartResponse battleStartResponse = 95;
+optional LimitActionListResponse limitActionListResponse = 96;
+optional ActionConditionListResponse actionConditionListResponse = 97;
+optional ActionConditionAwardResponse actionConditionAwardResponse = 98;
+optional FirstRechargeRewardResponse firstRechargeRewardResponse = 99;
+optional VipRewardResponse vipRewardResponse = 100;
+optional VipInfoResponse vipInfoResponse = 101;
+optional SkinEquipResponse skinEquipResponse = 102;
+optional SuiShopBuyResponse suiShopBuyResponse = 103;
+optional ChatBlackListResponse chatBlackListResponse = 104;
+optional SeasonInfoResponse seasonInfoResponse = 105;
+optional HeroLuckInfoResponse heroLuckInfoResponse = 107;
+optional HeroLuckDrawResponse heroLuckDrawResponse = 108;
+optional HeroLuckRefreshResponse heroLuckRefreshResponse = 109;
+optional MonthCardInfoResponse MonthCardInfoResponse = 110;
+optional MonthCardBuyResponse MonthCardBuyResponse = 111;
+optional MonthCardBuyForFriendResponse MonthCardBuyForFriendResponse = 112;
+optional MonthCardTakeRewardResponse MonthCardTakeRewardResponse = 113;
+optional ArmyRequestHelpResponse armyRequestHelpResponse = 114;
+optional ArmyRequestInfoResponse armyRequestInfoResponse = 115;
+optional HeroBattleInfoResponse heroBattleInfoResponse = 116;
+optional HeroBattleRewardResponse heroBattleRewardResponse = 117;
+optional HeroBattleRankListResponse heroBattleRankListResponse = 118;
+optional ClientJsonGetSuiShopResponse clientJsonGetSuiShopResponse = 119;
+optional LuckItemListConfigResponse luckItemListConfigResponse = 120;
+optional ClientJsonGetHeroBattleResponse clientJsonGetHeroBattleResponse = 121;
+optional UserListResponse userListResponse = 122;
+optional ClientJsonGetQQAwardResponse clientJsonGetQQAwardResponse = 123;
+optional QQAwardReceiveResponse qqAwardReceiveResponse = 124;
+optional RechargeResponse rechargeResponse = 125;
+optional ClientJsonGetLimitDisResponse clientJsonGetLimitDisResponse = 126;
+optional LimitDisBuyResponse limitDisBuyResponse = 127;
+optional ClientJsonGetWeAwardResponse clientJsonGetWeAwardResponse = 128;
+optional WeAwardReceiveResponse WeAwardReceiveResponse = 129;
+optional HeroUpgradeStarResponse heroUpgradeStarResponse = 130;
+optional ReceivePVEAwardResponse receivePVEAwardResponse = 131;
+optional PVEAwardInfoResponse pVEAwardInfoResponse = 132;
+optional HeroLotteryInfoResponse heroLotteryInfoResponse = 133;
+optional HeroLotteryRewardResponse heroLotteryRewardResponse = 134;
+optional LuckyDialInfoResponse luckyDialInfoResponse = 135;
+optional LuckyDialRewardResponse luckyDialRewardResponse = 136;
+optional HeroUpgradeStarQuickResponse heroUpgradeStarQuickResponse = 138;
+optional MedalRecommendLookResponse medalRecommendLookResponse = 139;
+optional MedalRecommendLikeResponse medalRecommendLikeResponse = 140;
+optional MedalRecommendUnlikeResponse medalRecommendUnlikeResponse = 141;
+optional MedalRecommendFirstResponse medalRecommendFirstResponse = 142;
+optional MedalPageBindResponse medalPageBindResponse = 143;
+optional MedalBatchPriceResponse medalBatchPriceResponse = 144;
+optional BattleBanPickSwitchResponse battleBanPickSwitchResponse = 145;
+optional AchievementLevelAwardResponse achievementLevelAwardResponse = 146;
+optional AchievementLevelListResponse achievementLevelListResponse = 147;
+optional ClientJsonGetLuckRechargeResponse clientJsonGetLuckRechargeResponse = 148;
+optional LuckRechargeRewardTakeResponse luckRechargeRewardTakeResponse = 149;
+optional CostSurprisesInfoResponse costSurprisesInfoResponse = 151;
+optional CostSurprisesAwardResponse costSurprisesAwardResponse = 152;
+optional FeatureTimeNotifyResponse featureTimeNotifyResponse = 153;
+optional MysteryStoreInfoResponse mysteryStoreInfoResponse = 154;
+optional MysteryStoreDisResponse mysteryStoreDisResponse = 155;
+optional CrystalDrawResponse crystalDrawResponse = 156;
+optional BattleFrameListResponse battleFrameListResponse = 157;
+optional OfficialInfoResponse officialInfoResponse = 158;
+optional UpOfficialResponse upOfficialResponse = 159;
+optional OfficialAwardResponse officialAwardResponse = 160;
+optional LevelAwardListResponse levelAwardListResponse = 165;
+optional LevelAwardResponse levelAwardResponse = 166;
+optional SignTotalRewardResponse signTotalRewardResponse = 167;
+optional ActionBoxSlotOpenResponse actionBoxSlotOpenResponse = 168;
+optional ActionBoxPutInSlotResponse actionBoxPutInSlotResponse = 169;
+optional ActionBoxOpenResponse actionBoxOpenResponse = 170;
+optional CompetitionFinalNotifyInfoResponse competitionFinalNotifyInfoResponse = 171;
+optional CompetitionMatchMapResponse competitionMatchMapResponse = 172;
+optional CompetitionBattleInfoResponse competitionBattleInfoResponse = 173;
+optional CompetitionBetInfoResponse competitionBetInfoResponse = 174;
+optional CompetitionBetResponse CompetitionBetResponse = 175;
+optional CompetitionRandHeroResponse competitionRandHeroResponse = 176;
+optional CompetitionRankListResponse competitionRankListResponse = 177;
+optional InviteCodeBindResponse inviteCodeBindResponse = 178;
+optional InviteCodeInvitorResponse inviteCodeInvitorResponse = 179;
+optional InviteRechargeBackInfoResponse inviteRechargeBackInfoResponse = 180;
+optional InviteInviteeRewardInfoResponse inviteInviteeRewardInfoResponse = 181;
+optional InviteInviteeRewardTakeResponse inviteInviteeRewardTakeResponse = 182;
+optional InviteInvitorRewardLoginTakeResponse inviteInvitorRewardLoginTakeResponse = 183;
+optional InviteInvitorRewardBackNumTakeResponse inviteInvitorRewardBackNumTakeResponse = 184;
+optional InviteInviteeBindInvitorRewardTakeResponse inviteInviteeBindInvitorRewardTakeResponse = 185;
+optional InviteRechargeBackTakeResponse inviteRechargeBackTakeResponse = 186;
+optional InviteInvitorRewardInfoResponse inviteInvitorRewardInfoResponse = 187;
+optional CompetitionWinNotifyResponse competitionWinNotifyResponse = 188;
+optional CrystalShopInfoResponse crystalShopInfoResponse = 189;
+optional CrystalShopFreshResponse crystalShopFreshResponse = 190;
+optional CrystalShopBuyResponse crystalShopBuyResponse = 191;
+optional GrabRedPacketInfoResponse grabRedPacketInfoResponse = 192;
+optional GrabRedPacketResponse grabRedPacketResponse = 193;
+optional GrabRedPacketShareResponse grabRedPacketShareResponse = 194;
+optional LuckTreeInfoResponse luckTreeInfoResponse = 195;
+optional LuckTreeUseWaterResponse luckTreeUseWaterResponse = 196;
+optional LuckTreeSignInResponse luckTreeSignInResponse = 197;
+optional LuckTreeGetAwardResponse luckTreeGetAwardResponse = 198;
+optional LuckTreeRankResponse luckTreeRankResponse = 199;
+optional SpringDrawInfoResponse springDrawInfoResponse = 200;
+optional SpringDrawResponse springDrawResponse = 201;
+optional ArmyTaskRewardResponse armyTaskRewardResponse = 202;
+optional ArmyTaskWeeklyAcRewardResponse armyTaskWeeklyAcRewardResponse = 203;
+optional ArmyTaskListResponse armyTaskListResponse = 204;
+optional ArmySignInResponse armySignInResponse = 205;
+optional ArmyRedBagListResponse armyRedBagListResponse = 206;
+optional ArmyWarehouseListResponse armyWarehouseListResponse = 207;
+optional ArmyWarehouseRetrieveResponse armyWarehouseRetrieveResponse = 208;
+optional ArmyWarehouseDonateResponse armyWarehouseDonateResponse = 209;
+optional ArmyBossUpgradeResponse armyBossUpgradeResponse = 210;
+optional ArmyRevengeListResponse armyRevengeListResponse = 211;
+optional ArmyBossInfoResponse armyBossInfoResponse = 212;
+optional ArmyPlunderResurrectInfoResponse armyPlunderResurrectInfoResponse = 213;
+optional ArmyPlunderResurrectResponse armyPlunderResurrectResponse = 214;
+optional ArmyPlunderRewardRestNumResponse armyPlunderRewardRestNumResponse = 215;
+optional BattleBoxInfoResponse battleBoxInfoResponse = 216;
+optional BattleBoxAwardResponse battleBoxAwardResponse = 217;
+optional ChessboardDiceInfoResponse chessboardDiceInfoResponse = 218;
+optional ChessboardDiceDoResponse chessboardDiceDoResponse = 219;
+optional ChessboardDiceAwardResponse chessboardDiceAwardResponse = 220;
+optional BattleTypeInfoResponse battleTypeInfoResponse = 221;
+optional HonorScoreQueryResponse honorScoreQueryResponse = 222;
+optional HonorScoreLogQueryResponse honorScoreLogQueryResponse = 223;
+optional VipStoneInfoResponse vipStoneInfoResponse = 224;
+optional VipStoneBuyResponse vipStoneBuyResponse = 225;
+optional VipStoneRewardTakeResponse vipStoneRewardTakeResponse = 226;
+optional HeroYUANStarBagResponse heroYUANStarBagResponse = 227;
+optional HeroYUANStarBagBuyResponse heroYUANStarBagBuyResponse = 228;
+optional DoubleBuffNotifyResponse doubleBuffNotifyResponse = 229;
+optional FriendShopBuyResponse friendShopBuyResponse = 230;
+optional FriendSendCoinResponse friendSendCoinResponse = 231;
+optional FriendShopInfoResponse friendShopInfoResponse = 232;
+optional FriendApplyRelationResponse friendApplyRelationResponse = 233;
+optional FriendDeleteRelationResponse friendDeleteRelationResponse = 234;
+optional FriendConfirmRefuseRelationshipResponse friendConfirmRefuseRelationshipResponse = 235;
+optional FriendReplyRelationResponse friendReplyRelationResponse = 236;
+optional LimitBoxInfoResponse limitBoxInfoResponse = 237;
+optional LimitBoxBuyResponse limitBoxBuyResponse = 238;
+optional LimitBoxGetResponse limitBoxGetResponse = 239;
+optional FriendRelationListResponse friendRelationListResponse = 240;
+optional PassportInfoResponse passportInfoResponse = 241;
+optional PassportBuyLevelResponse passportBuyLevelResponse = 242;
+optional PassportPromotionResponse passportPromotionResponse = 243;
+optional PassportPromotionForFriendResponse passportPromotionForFriendResponse = 244;
+optional PassportLvAwardQuickGetResponse passportLvAwardQuickGetResponse = 245;
+optional PassportShopInfoResponse passportShopInfoResponse = 246;
+optional PassportShopBuyResponse passportShopBuyResponse = 247;
+optional PassportTaskListResponse passportTaskListResponse = 248;
+optional PassportGradeGetResponse passportGradeGetResponse = 249;
+optional AnniversaryInfoResponse anniversaryInfoResponse = 250;
+optional AnniversaryDaysAwardResponse anniversaryDaysAwardResponse = 251;
+optional AnniversaryDrawAwardResponse anniversaryDrawAwardResponse = 252;
+optional ArrowDrawInfoResponse arrowDrawInfoResponse = 253;
+optional ArrowDrawResponse arrowDrawResponse = 254;
+optional HeroExclusiveExchangeResponse heroExclusiveExchangeResponse = 256;
+optional BattleBubbleListResponse battleBubbleListResponse = 257;
+optional BattleBubbleUseResponse battleBubbleUseResponse = 258;
+optional BattleBubbleSaleResponse battleBubbleSaleResponse = 259;
+optional BattleBubbleEquipResponse battleBubbleEquipResponse = 260;
+optional HeadBoxBuyResponse headBoxBuyResponse = 261;
+optional ChatBoxBuyResponse chatBoxBuyResponse = 262;
+optional OnePayInfoResponse onePayInfoResponse = 263;
+optional OnePayBuyResponse onePayBuyResponse = 264;
+optional MysteryStoreLogResponse mysteryStoreLogResponse = 265;
+optional EveryChargeInfoResponse everyChargeInfoResponse = 266;
+optional EveryChargeAwardResponse everyChargeAwardResponse = 267;
+optional FourHeroGiftBuyResponse fourHeroGiftBuyResponse = 268;
+optional FourHeroGiftNotifyResponse fourHeroGiftNotifyResponse = 269;
+optional EasyConvertResponse easyConvertResponse = 270;
+optional EventDataInfoResponse eventDataInfoResponse = 271;
+optional EventDrawResponse eventDrawResponse = 272;
+optional EventTaskTakeResponse EventTaskTakeResponse = 273;
+optional EventNoticeLogResponse EventNoticeLogResponse = 274;
+optional BattleLikeNoticeResponse battleLikeNoticeResponse = 275;
+optional BattleBubbleBuyResponse battleBubbleBuyResponse = 276;
+optional ChenMiGiftAwardResponse chenMiGiftAwardResponse = 277;
+optional EmoticonBuyResponse emoticonBuyResponse = 278;
+optional EventNoviceInfoResponse eventNoviceInfoResponse = 279;
+optional EventNoviceAwardResponse eventNoviceAwardResponse = 280;
+optional ChipFuseConvertResponse chipFuseConvertResponse = 281;
+optional ChipFuseNoticeLogResponse chipFuseNoticeLogResponse = 282;
+optional ChipFuseInfoResponse chipFuseInfoResponse = 283;
+optional HourlyActivityInfoResponse hourlyActivityInfoResponse = 284;
+optional HourlyActivityAwardResponse hourlyActivityAwardResponse = 285;
+optional SeasonShopInfoResponse seasonShopInfoResponse = 286;
+optional SeasonShopBuyResponse seasonShopBuyResponse = 287;
+optional CompetitionV2AwardResponse competitionV2AwardResponse = 288;
+optional CompetitionV2AwardStatusResponse competitionV2AwardStatusResponse = 289;
+optional CompetitionV2SignUpResponse competitionV2SignUpResponse = 290;
+optional CompetitionV2StatusResponse competitionV2StatusResponse = 291;
+optional CompetitionV2ExitResponse competitionV2ExitResponse = 292;
+optional CompetitionV2PlayerUpdateResponse competitionV2PlayerUpdateResponse = 293;
+optional CompetitionV2SignUpInfoResponse competitionV2SignUpInfoResponse = 294;
+optional ChatBanResponse chatBanResponse = 295;
+optional AstrologyInfoResponse astrologyInfoResponse = 296;
+optional AstrologyAwardResponse astrologyAwardResponse = 297;
+optional AstrologySetInfoResponse astrologySetInfoResponse = 298;
+optional AstrologyExchangeResponse astrologyExchangeResponse = 299;
+optional HeroAwakeLevelUpResponse heroAwakeLevelUpResponse = 300;
+optional StoreBuyResponse storeBuyResponse = 301;
+optional StoreBuyInfoResponse storeBuyInfoResponse = 302;
+optional FirstRechargeV2AwardResponse firstRechargeV2AwardResponse = 303;
+optional FirstRechargeV2InfoResponse firstRechargeV2InfoResponse = 304;
+optional FriendHeroPageInfoResponse friendHeroPageInfoResponse = 305;
+optional FriendHeroInfoResponse friendHeroInfoResponse = 306;
+optional FriendHeroSetResponse friendHeroSetResponse = 307;
+optional FriendHeroBorrowResponse friendHeroBorrowResponse = 308;
+optional FriendPartnerApplyListResponse friendPartnerApplyListResponse = 309;
+optional FriendTaskRewardResponse friendTaskRewardResponse = 310;
+optional FriendTaskListResponse friendTaskListResponse = 311;
+optional BoxAwardResponse boxAwardResponse = 314;
+optional PveBossPageInfoResponse pveBossPageInfoResponse = 315;
+optional PveBossRewardResponse pveBossRewardResponse = 316;
+optional TeamRobotAddResponse teamRobotAddResponse = 317;
+optional ItemCostResponse itemCostResponse = 318;
+optional BattleExitResponse battleExitResponse = 319;
+optional ArmyShopInfoResponse armyShopInfoResponse = 320;
+optional ArmyShopPutResponse armyShopPutResponse = 321;
+optional TaskInfoResponse taskInfoResponse = 322;
+optional TaskRewardResponse taskRewardResponse = 323;
+optional GloryRoadInfoResponse gloryRoadInfoResponse = 324;
+optional GloryRoadRewardResponse gloryRoadRewardResponse = 325;
+optional RankStarUpResponse rankStarUpResponse = 326;
+optional ClientDebugResponse clientDebugResponse = 327;
+optional HeroResetProficiencyResponse heroResetProficiencyResponse = 328;
+optional HeroTalentInfoResponse heroTalentInfoResponse = 329;
+optional HeroTalentLvUpResponse heroTalentLvUpResponse = 330;
+optional HeroTalentClearResponse heroTalentClearResponse = 331;
+optional MedalRecycleGetResponse medalRecycleGetResponse = 332;
+optional ActivityOld2021InfoResponse activityOld2021InfoResponse = 333;
+optional ActivityOld2021GetResponse activityOld2021GetResponse = 334;
+}
+message CommonUser {
+optional int64 headImage = 1;
+optional string name = 2;
+optional int32 level = 3;
+optional int32 exp = 4;
+optional int32 gold = 5;
+optional int32 coin = 6;
+optional int32 diam = 7;
+optional int32 medalMoney = 10;
+optional int32 headBoxId = 11;
+optional int32 vipLevel = 12;
+optional int32 rmb = 13;
+optional BLUE_VIP_TYPE blueVipType = 14;
+optional int32 blueVipLevel = 15;
+optional bool isBlueYearVip = 16;
+optional int32 chatBoxId = 17;
+}
+message CommonUserLevel {
+optional int32 level = 3;
+optional int32 exp = 4;
+}
+message CommonUserMoney {
+optional int32 gold = 5;
+optional int32 coin = 6;
+optional int32 diam = 7;
+optional int32 medalMoney = 8;
+}
+message CommonArenaUser {
+optional int32 WinNum = 1;
+optional int32 FightNum = 2;
+optional int32 RankId = 3;
+optional int32 RankScore = 4;
+optional int32 MaxRankId = 5;
+optional int32 MaxRankScore = 6;
+}
+message CommonHero {
+optional int32 HeroId = 1;
+optional int32 Proficiency = 2;
+optional int32 SkinId = 3;
+optional int32 FightNum = 4;
+optional bool IsBuy = 5;
+optional int64 TestTimeUnix = 6;
+optional int64 FreeTimeUnix = 7;
+optional int32 StarLevel = 8;
+optional int32 MedalPage = 9;
+optional int32 AwakeLevel = 10;
+}
+message CommonSkin {
+optional int32 SkinId = 1;
+optional bool IsBuy = 2;
+optional int32 UseNum = 3;
+}
+message CommonItem {
+optional ITEM_TYPE ItemType = 1;
+optional int32 ItemId = 2;
+optional int32 ItemNum = 3;
+optional int64 Ext = 4;
+}
+message CommonMedalUser {
+optional int32 openPage = 1;
+optional int32 curPage = 2;
+}
+message CommonMedalAdorn {
+optional int32 page = 1;
+optional int32 adornId = 2;
+optional int32 equipMedal = 3;
+}
+message CommonMedalPage {
+optional int32 page = 1;
+optional string name = 2;
+optional int32 skill = 3;
+optional int32 skill2 = 4;
+repeated int32 skillActiveList = 5;
+}
+message CommonMedal {
+optional int32 medalId = 1;
+optional int32 medalNum = 2;
+}
+message CommonFriend {
+optional string uid = 1;
+optional string name = 2;
+optional int32 level = 3;
+optional int64 headImage = 4;
+optional int32 rankId = 5;
+optional int32 maxRankId = 6;
+optional int32 intimacy = 7;
+optional ONLINE_STATUS onlineStatus = 8;
+optional int32 headBoxId = 9;
+optional int32 vipLevel = 10;
+optional int64 loginUnix = 11;
+optional BLUE_VIP_TYPE blueVipType = 12;
+optional int32 blueVipLevel = 13;
+optional bool isBlueYearVip = 14;
+optional bool isDND = 15;
+optional bool isSendCoin = 16;
+optional int32 relationship = 17;
+optional int32 relationshipRequest = 18;
+optional int64 relationshipDelUnix = 19;
+optional int64 old2021Unix = 20;
+}
+message CommonMail {
+optional int32 id = 1;
+optional string from = 2;
+optional string title = 3;
+optional string content = 4;
+optional int64 cTime = 5;
+optional bool isRead = 6;
+repeated CommonItem Rewards = 7;
+}
+message CommonAchievement {
+optional int32 achievementId = 1;
+optional int32 goalNum = 2;
+optional bool rewardState = 3;
+}
+message BattleLoadingRequest {
+optional int32 percent = 1;
+}
+message BattleLoadingResponse {
+optional string uid = 1;
+optional int32 percent = 2;
+}
+message BattleReadyStatusResponse {
+optional BATTLE_STATUS status = 2;
+repeated BattleUser userList = 3;
+optional CommonBanPickStep banPickStep = 4;
+repeated BattleReadyStatusResponse_HeroIdBanMapEntry heroIdBanMap = 5;
+repeated MapFieldEntry heroSelList = 6;
+}
+message BattleReadyStatusResponse_HeroIdBanMapEntry {
+optional int32 key = 1;
+optional int32 value = 2;
+}
+message MapFieldEntry {
+optional int32 key = 1;
+repeated int32 value = 2;
+}
+message BattleSelHeroRequest {
+optional int32 heroId = 1;
+optional int32 skinId = 2;
+optional string borrowUid = 3;
+}
+message BattleBeginResponse {
+optional int64 startTime = 1;
+optional int32 duration = 2;
+}
+message BattleJoinResponse {
+optional int64 battleId = 1;
+}
+message BattleLoginRequest {
+optional int64 battleId = 1;
+}
+message BattleLoginResponse {
+}
+message BattleReLoginRequest {
+optional int64 battleId = 1;
+}
+message BattleFrameListRequest {
+optional int64 battleId = 1;
+optional int32 startFrameId = 2;
+optional int32 limit = 3;
+}
+message BattleFrameListResponse {
+repeated BattleSyncResponse frameList = 1;
+optional bool isEnd = 2;
+}
+message BattleSyncRequest {
+optional int64 battleId = 1;
+repeated BattleMsg msgs = 2;
+}
+message BattleSyncResponse {
+repeated BattleMsg msgs = 1;
+optional int32 FrameId = 2;
+}
+message LoginRequest {
+optional string ptid = 1;
+optional int32 channel = 2;
+optional string platformParams = 3;
+optional int32 source = 4;
+optional bool isReconnect = 5;
+optional string os = 6;
+}
+message LoginResponse {
+optional bool isNewUser = 1;
+optional string uid = 2;
+optional CommonUser commonUser = 3;
+optional CommonArenaUser commonArenaUser = 4;
+repeated CommonSkin commonSkinList = 5;
+repeated CommonHero commonHeroList = 6;
+optional CommonMedalUser commonMedalUser = 7;
+repeated CommonMedal commonMedalList = 8;
+repeated CommonMedalPage commonMedalPageList = 9;
+optional int32 nameSetCount = 10;
+optional NoticeGetResponse noticeGetResp = 11;
+optional int32 gxId = 12;
+repeated CommonItem commonItemList = 13;
+optional CommonFirstRecharge commonFirstRecharge = 15;
+repeated CommonFriend chatBlackList = 16;
+optional CommonMonthCard card = 17;
+optional CommonBattleEscape battleEscape = 18;
+optional bool isTestUser = 19;
+repeated CommonFeatureTime commonFeatureTimeList = 20;
+optional int64 now = 21;
+optional int64 crystalDrawFreeUnix = 22;
+optional int32 specialTaskRewardNum = 23;
+optional bool isOldInvitee = 24;
+repeated int64 doubleBuffCountdownList = 26;
+repeated CommonBattleBubble commonBattleBubbleList = 28;
+optional int64 fourHeroGiftCountdown = 29;
+optional LimitBoxGetResponse limitBoxState = 30;
+optional CommonChemMi commonChenMi = 31;
+optional int32 eventNoviceActiveDay = 32;
+optional int64 registerUnix = 33;
+repeated CommonFirstRechargeV2Info firstRechargeV2InfoList = 34;
+repeated LoginResponse_FriendHeroBorrowMapEntry friendHeroBorrowMap = 35;
+repeated CommonFriendBorrowHero friendHeroBorrowList = 36;
+optional int32 GloryRoadState = 37;
+optional int64 UnSyncInfoUploadDuration = 38;
+optional bool isAllChatBan = 39;
+optional CommonMedalRecycleInfo medalRecycleInfo = 40;
+optional CommonActivityOld2021 activityOld2021 = 41;
+optional int32 crystalDrawNum = 42;
+}
+message LoginResponse_FriendHeroBorrowMapEntry {
+optional string key = 1;
+optional CommonFriendBorrowHero value = 2;
+}
+message Message {
+optional MSG type = 1;
+optional string uid = 2;
+optional Request request = 3;
+optional Response response = 4;
+optional int32 seq = 5;
+optional bool isVerify = 6;
+}
+message BattleMsg {
+optional string uid = 1;
+optional int32 hId = 2;
+optional int32 ctrl = 3;
+optional float posX = 4;
+optional float posy = 5;
+optional float aDeg = 6;
+optional int32 hp = 7;
+optional int32 dir = 8;
+optional int32 hit = 9;
+optional int32 crit = 10;
+optional int32 val = 11;
+optional string kUid = 12;
+}
+message BattleUser {
+optional string uid = 1;
+optional BATTLE_STATUS status = 2;
+optional int32 pos = 3;
+optional int32 heroId = 4;
+optional int32 skinId = 5;
+optional MedalInfo medalInfo = 6;
+optional int32 proficiency = 7;
+optional bool isRobot = 8;
+optional int32 tId = 9;
+optional int32 starLevel = 10;
+optional bool isSend = 11;
+repeated int32 armsSkillIdList = 12;
+optional int32 helpHeroId = 13;
+repeated BattleUser_CommonBattleBubbleMapEntry commonBattleBubbleMap = 14;
+optional int32 awakeLevel = 15;
+optional string borrowUid = 16;
+repeated int32 talentIdList = 17;
+optional int32 petNum = 18;
+}
+message BattleUser_CommonBattleBubbleMapEntry {
+optional int32 key = 1;
+optional int32 value = 2;
+}
+message MedalInfo {
+repeated MedalInfo_MapMedalEntry mapMedal = 1;
+repeated int32 medalSkillIdList = 2;
+}
+message MedalInfo_MapMedalEntry {
+optional int32 key = 1;
+optional int32 value = 2;
+}
+message BattleData {
+optional string name = 1;
+optional int64 headImage = 2;
+optional int32 level = 3;
+optional double rate = 4;
+optional int32 rankId = 5;
+optional int32 maxRankId = 6;
+optional int32 heroId = 7;
+optional int32 skinId = 8;
+optional int32 proficiency = 9;
+optional MedalInfo medalInfo = 10;
+repeated int32 talentIdList = 11;
+optional int32 rankScore = 12;
+optional int32 maxRankScore = 13;
+optional int32 headBoxId = 14;
+optional int32 vipLevel = 15;
+optional BLUE_VIP_TYPE blueVipType = 16;
+optional int32 blueVipLevel = 17;
+optional bool isBlueYearVip = 18;
+optional int32 starLevel = 19;
+repeated int32 heroIdList = 20;
+repeated int32 armsSkillIdList = 21;
+optional int32 officialId = 22;
+repeated BattleData_CommonBattleBubbleMapEntry commonBattleBubbleMap = 23;
+optional int32 awakeLevel = 24;
+optional string borrowUid = 25;
+optional int32 maxRankIdIndex = 26;
+optional int32 petNum = 27;
+}
+message BattleData_CommonBattleBubbleMapEntry {
+optional int32 key = 1;
+optional int32 value = 2;
+}
+message TeamUser {
+optional string uid = 1;
+optional string name = 2;
+optional int64 headImage = 3;
+optional int32 pos = 4;
+optional int32 tId = 5;
+optional bool isLeader = 6;
+optional int32 headBoxId = 7;
+optional int32 vipLevel = 8;
+optional bool isRobot = 9;
+optional bool isReady = 10;
+}
+message TeamBattleUser {
+optional string uid = 1;
+optional bool isRobot = 2;
+optional BattleData battleData = 3;
+optional int32 tId = 4;
+optional int32 pos = 5;
+}
+message CommonBanPickStep {
+optional BATTLE_BAN_PICK_STATUS banPickStatus = 1;
+optional int32 tId = 2;
+repeated int32 posList = 3;
+}
+message TeamListResponse {
+repeated TeamUser userlist = 1;
+}
+message MatchBattleInfoResponse {
+optional int64 battleId = 1;
+optional string ip = 2;
+optional int32 port = 3;
+repeated TeamBattleUser userlist = 4;
+optional BATTLE_TYPE battleType = 5;
+optional bool IsLimit = 6;
+optional int32 battleServerId = 7;
+optional int32 wsPort = 8;
+optional TEAM_TYPE teamType = 9;
+optional BATTLE_TYPE randBattleType = 10;
+optional bool isBanPick = 11;
+optional int32 plunderArmyId = 12;
+optional string plunderArmyName = 13;
+repeated int32 armyBossUidList = 14;
+}
+message TeamCreateRequest {
+optional BATTLE_TYPE battleType = 1;
+optional TEAM_TYPE teamType = 2;
+optional string clientVersion = 3;
+optional bool isBanPick = 4;
+optional string ext = 5;
+}
+message TeamCreateResponse {
+optional int64 teamId = 1;
+}
+message BattleEndRequest {
+optional bool isWin = 1;
+optional int32 myRank = 2;
+optional int32 heroId = 3;
+optional int32 killNum = 4;
+optional int32 beKilledNum = 5;
+optional bool isMvp = 6;
+optional BATTLE_TYPE battleType = 7;
+optional int32 multiKillNum = 8;
+optional int32 assistNum = 9;
+optional int32 shuchu = 10;
+optional int32 tuijin = 11;
+optional int32 shengcun = 12;
+optional int32 zhiyuan = 13;
+optional BattleRecord record = 14;
+optional TEAM_TYPE teamType = 15;
+optional int32 round = 16;
+optional BATTLE_TYPE randBattleType = 17;
+optional int32 syncState = 18;
+optional int32 skinId = 19;
+optional int32 targetArmyId = 20;
+optional int64 battleId = 21;
+repeated int32 armyBossUidList = 22;
+optional int32 enemyHeroId = 23;
+repeated int32 honorScoreSubList = 24;
+optional string honorScoreExtParam = 25;
+optional bool isTripleKill = 26;
+optional bool isQuadraKill = 27;
+optional bool isPentaKill = 28;
+optional int32 teamBattlePersonNum = 29;
+optional int32 rankListScore = 30;
+optional string borrowUid = 31;
+optional int32 pveId = 32;
+optional int64 duration = 33;
+repeated BattleEndRequest_ExtMapEntry extMap = 34;
+repeated BattleEndRequest_TaskMapEntry taskMap = 35;
+}
+message BattleEndRequest_ExtMapEntry {
+optional int32 key = 1;
+optional int32 value = 2;
+}
+message BattleEndRequest_TaskMapEntry {
+optional int32 key = 1;
+optional int32 value = 2;
+}
+message BattleEndResponse {
+optional CommonArenaUser arenaUser = 1;
+optional CommonUserLevel userLevelUpdate = 2;
+optional CommonUpdate commonUpdate = 4;
+optional int32 addExp = 5;
+optional int32 addExpBySkin = 6;
+optional int32 addCoin = 7;
+optional int32 addCoinBySkin = 8;
+optional int32 weekCoin = 9;
+optional int32 addRankScore = 11;
+optional int32 addMaxRankScore = 12;
+repeated CommonHero heroListUpdate = 13;
+optional int32 addProficiency = 14;
+optional int32 addRank = 15;
+optional int32 addMaxRank = 16;
+optional int32 addGoal = 17;
+optional int32 addGoalRank = 18;
+repeated CommonItem armyGoodList = 19;
+repeated CommonItem actionToolList = 20;
+optional int32 addCoinByArmy = 21;
+optional CommonUpdate extReward = 22;
+optional int32 rewardNum = 23;
+optional int32 minWinDuration = 24;
+optional int32 addCompetitionScore = 25;
+optional int32 AddDevote = 26;
+repeated int32 MaterialList = 27;
+optional int32 Grade = 28;
+optional bool PlunderNoMoreAward = 29;
+optional int32 tripleKillNum = 30;
+optional int32 quadraKillNum = 31;
+optional int32 pentaKillNum = 32;
+optional int32 mvpNum = 33;
+optional int32 legendaryNum = 34;
+optional int32 protectCardType = 35;
+repeated int32 pveFinishTaskList = 36;
+optional int32 pveRank = 37;
+optional int32 pveTotalCount = 38;
+optional bool canEnterPveRank = 39;
+optional int32 curPveRank = 40;
+optional int32 armyFunding = 41;
+}
+message CommonUpdate {
+repeated CommonItem addItemList = 1;
+repeated CommonItem itemList = 2;
+optional CommonMonthCard monthCard = 3;
+optional bool isTranformHero = 4;
+optional bool isTranformSkin = 5;
+}
+message CommonBattleEscape {
+optional BATTLE_TYPE battleType = 1;
+optional int32 score = 2;
+}
+message HeroBuyRequest {
+optional int32 heroId = 1;
+optional ITEM_TYPE itemType = 2;
+optional SHOP_TYPE shopType = 3;
+}
+message HeroBuyResponse {
+repeated CommonHero heroListUpdate = 1;
+optional CommonUpdate commonUpdate = 3;
+}
+message SkinBuyRequest {
+optional int32 skinId = 1;
+optional SHOP_TYPE shopType = 2;
+}
+message SkinBuyResponse {
+optional CommonUpdate commonUpdate = 2;
+}
+message MedalDrawRequest {
+optional int32 id = 1;
+}
+message MedalDrawResponse {
+optional CommonUpdate commonUpdate = 2;
+repeated CommonMedal medalListUpdate = 3;
+}
+message MedalBuyRequest {
+optional int32 id = 1;
+}
+message MedalBuyResponse {
+optional CommonUpdate commonUpdate = 2;
+repeated CommonMedal medalListUpdate = 3;
+}
+message MedalAdornListRequest {
+optional int32 heroId = 1;
+}
+message MedalAdornListResponse {
+repeated CommonMedalAdorn commonMedalAdornList = 1;
+optional CommonMedalPage commonMedalPage = 2;
+}
+message MedalAdornBuyRequest {
+optional int32 adornId = 1;
+optional int32 page = 2;
+optional ITEM_TYPE itemType = 3;
+}
+message MedalAdornBuyResponse {
+optional CommonUpdate commonUpdate = 2;
+repeated CommonMedalAdorn commonMedalAdornList = 3;
+}
+message MedalUpRequest {
+optional int32 adornId = 1;
+optional int32 page = 2;
+optional int32 medalId = 3;
+}
+message MedalUpResponse {
+repeated CommonMedalAdorn commonMedalAdornList = 1;
+}
+message MedalDownRequest {
+optional int32 adornId = 1;
+optional int32 page = 2;
+}
+message MedalDownResponse {
+optional CommonMedalPage commonMedalPage = 1;
+repeated CommonMedalAdorn commonMedalAdornList = 2;
+}
+message MedalOpenPageRequest {
+optional ITEM_TYPE itemType = 1;
+optional int32 heroId = 2;
+}
+message MedalOpenPageResponse {
+optional CommonUpdate commonUpdate = 2;
+optional CommonMedalUser commonMedalUser = 3;
+optional CommonMedalPage commonMedalPage = 4;
+repeated CommonMedalAdorn commonMedalAdornList = 5;
+repeated CommonHero heroListUpdate = 6;
+}
+message MedalSelPageRequest {
+optional int32 page = 1;
+}
+message MedalSelPageResponse {
+optional CommonMedalUser commonMedalUser = 1;
+}
+message MedalPageSetNameRequest {
+optional int32 page = 1;
+optional string name = 2;
+}
+message MedalPageSetNameResponse {
+optional CommonMedalPage commonMedalPage = 1;
+}
+message MedalSkillActiveRequest {
+optional int32 page = 1;
+optional int32 medalskillId = 2;
+}
+message MedalSkillActiveResponse {
+optional CommonMedalPage commonMedalPage = 2;
+optional CommonUpdate commonUpdate = 3;
+}
+message MedalSkillEquipRequest {
+optional int32 page = 1;
+optional int32 medalskillId = 2;
+optional int32 medalSkillPos = 3;
+}
+message MedalSkillEquipResponse {
+optional CommonMedalPage commonMedalPage = 2;
+}
+message MedalAllDownRequest {
+optional int32 page = 2;
+}
+message MedalAllDownResponse {
+optional CommonMedalPage commonMedalPage = 1;
+repeated CommonMedalAdorn commonMedalAdornList = 2;
+}
+message MedalSellRequest {
+optional int32 medalId = 1;
+}
+message MedalSellResponse {
+optional CommonUpdate commonUpdate = 2;
+repeated CommonMedal medalListUpdate = 3;
+}
+message MedalSellBatchRequest {
+repeated int32 medalLevel = 1;
+}
+message MedalSellBatchResponse {
+optional CommonUpdate commonUpdate = 2;
+repeated CommonMedal medalListUpdate = 3;
+}
+message OnlineDurationResponse {
+optional int32 onlineDuration = 1;
+}
+message FriendListResponse {
+repeated CommonFriend list = 1;
+}
+message FriendAddListResponse {
+repeated CommonFriend list = 1;
+}
+message FriendAddSearchRequest {
+optional string keyword = 1;
+}
+message FriendAddSearchResponse {
+repeated CommonFriend list = 1;
+}
+message FriendApplyRequest {
+optional string friendUid = 1;
+}
+message FriendApplyListResponse {
+repeated CommonFriend list = 1;
+}
+message FriendReplyRequest {
+optional string friendUid = 1;
+optional bool isAgree = 2;
+}
+message FriendDeleteRequest {
+optional string friendUid = 1;
+}
+message ArenaSubRankListRequest {
+optional RANK_TYPE rankType = 1;
+optional int32 subType = 2;
+optional bool isShowMyNear = 3;
+optional int32 startRank = 4;
+optional int32 endRank = 5;
+}
+message ArenaSubRankListResponse {
+repeated CommonArenaRank rankList = 1;
+}
+message CommonArenaRank {
+optional int32 rank = 1;
+optional string name = 2;
+optional int32 level = 3;
+optional int32 value1 = 4;
+optional int32 value2 = 5;
+optional int32 value3 = 11;
+optional bool status1 = 12;
+optional bool status2 = 13;
+optional string uid = 6;
+optional BLUE_VIP_TYPE blueVipType = 7;
+optional int32 blueVipLevel = 8;
+optional bool isBlueYearVip = 9;
+optional int32 vipLevel = 10;
+optional string name2 = 14;
+optional int32 serverId = 15;
+optional int32 serverId2 = 16;
+}
+message ArenaSubRankRequest {
+optional RANK_TYPE rankType = 1;
+}
+message ArenaSubRankResponse {
+optional int32 rank = 1;
+optional int32 rankId = 2;
+optional int32 score = 3;
+optional int32 seasonId = 4;
+optional int32 MaxId = 5;
+}
+message TeamJoinRequest {
+optional int64 teamId = 1;
+optional string clientVersion = 2;
+optional BATTLE_TYPE battleType = 3;
+optional TEAM_TYPE teamType = 4;
+optional bool isBanPick = 5;
+optional string ext = 6;
+}
+message TeamApplyRequest {
+optional string byApplyUid = 1;
+optional int64 teamId = 2;
+optional BATTLE_TYPE battleType = 3;
+optional TEAM_TYPE teamType = 4;
+optional bool isBanPick = 5;
+optional int32 pveId = 6;
+}
+message TeamByApplyResponse {
+optional int64 teamId = 1;
+optional BATTLE_TYPE battleType = 2;
+optional string name = 3;
+optional int64 headImage = 4;
+optional int32 rankId = 5;
+optional int32 maxRankId = 6;
+optional string uid = 7;
+optional int32 headBoxId = 8;
+optional int32 vipLevel = 9;
+optional TEAM_TYPE teamType = 10;
+optional BLUE_VIP_TYPE blueVipType = 11;
+optional int32 blueVipLevel = 12;
+optional bool isBlueYearVip = 13;
+optional bool isBanPick = 14;
+optional int32 pveId = 15;
+}
+message TeamRefuseRequest {
+optional string applyUid = 1;
+optional int64 teamId = 2;
+}
+message TeamByRefuseResponse {
+optional string refuseUid = 1;
+optional string refuseName = 2;
+}
+message NameSetRequest {
+optional string name = 1;
+}
+message NameSetResponse {
+optional CommonUpdate commonUpdate = 4;
+}
+message FCMSetRequest {
+optional string trueName = 1;
+optional string idCard = 2;
+}
+message FCMSetResponse {
+optional int32 cm = 1;
+}
+message RankListRequest {
+optional RANK_TYPE rankType = 1;
+optional int32 rankSubType = 2;
+optional int32 startRank = 4;
+optional int32 endRank = 5;
+optional bool isWeek = 6;
+}
+message RankListResponse {
+optional CommonArenaRank myRankInfo = 1;
+repeated CommonArenaRank rankList = 2;
+}
+message CompetitionRankListRequest {
+optional int32 startRank = 2;
+optional int32 endRank = 3;
+}
+message CompetitionRankListResponse {
+optional CommonArenaRank myRankInfo = 1;
+repeated CommonArenaRank rankList = 2;
+}
+message RecentContactListResponse {
+repeated CommonFriend list = 1;
+}
+message BattleServerBattleEndRequest {
+optional int64 battleId = 1;
+}
+message MailListResponse {
+repeated CommonMail list = 1;
+}
+message MailReadRequest {
+optional int32 mailId = 1;
+}
+message MailRewardRequest {
+repeated int32 mailIdList = 1;
+}
+message MailRewardResponse {
+optional CommonArenaUser arenaUser = 1;
+optional CommonUserLevel userLevelUpdate = 2;
+optional CommonUpdate commonUpdate = 4;
+}
+message MailDelRequest {
+repeated int32 mailIdList = 1;
+}
+message MailDelResponse {
+optional CommonArenaUser arenaUser = 1;
+optional CommonUserLevel userLevelUpdate = 2;
+optional CommonUpdate commonUpdate = 4;
+}
+message BattleStartRequest {
+optional int64 battleId = 1;
+optional bool isBattleWithFriend = 2;
+optional int32 heroId = 3;
+optional int32 skinId = 4;
+optional int32 teamBattlePersonNum = 5;
+optional string borrowUid = 6;
+}
+message BattleStartResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message AchievementRewardRequest {
+optional int32 achievementId = 1;
+}
+message AchievementRewardResponse {
+optional CommonUpdate commonUpdate = 4;
+}
+message AchievementListResponse {
+repeated CommonAchievement list = 1;
+}
+message UserInfoBaseRequest {
+optional string uid = 1;
+}
+message UserInfoBaseResponse {
+optional string uid = 1;
+optional string name = 2;
+optional int32 level = 3;
+optional int32 exp = 4;
+optional int64 headImage = 5;
+optional ONLINE_STATUS status = 6;
+optional string serverName = 7;
+optional int32 loginNum = 8;
+optional int64 registerUnix = 9;
+optional int32 gameTime = 10;
+optional int32 heroNum = 11;
+optional int32 skinNum = 12;
+optional int32 rankId = 13;
+optional int32 rankScore = 14;
+optional int32 rankIndex = 15;
+optional int32 maxRankId = 16;
+optional int32 maxRankScore = 17;
+optional int32 maxRankIndex = 18;
+optional int32 mvpNum = 19;
+optional int32 mvpIndex = 20;
+optional int32 legendaryNum = 21;
+optional int32 legendaryIndex = 22;
+optional int32 headBoxId = 23;
+optional int32 vipLevel = 24;
+optional BLUE_VIP_TYPE blueVipType = 25;
+optional int32 blueVipLevel = 26;
+optional bool isBlueYearVip = 27;
+optional string armyName = 28;
+optional int32 chatBoxId = 29;
+optional int32 supportNum = 30;
+optional string ptid = 31;
+optional string region = 32;
+}
+message UserInfoBattleRequest {
+optional string uid = 1;
+optional BATTLE_TYPE battleType = 2;
+}
+message UserInfoBattleResponse {
+optional int32 shuchu = 1;
+optional int32 tuijin = 2;
+optional int32 shengcun = 3;
+optional int32 zhiyuan = 4;
+optional int32 fightNum = 5;
+optional int32 winNum = 6;
+optional int32 recentlyFightNum = 7;
+optional int32 recentlyWinNum = 8;
+optional int32 mvpNum = 9;
+optional int32 loseMvpNum = 10;
+optional int32 legendaryNum = 11;
+optional int32 noDeadNum = 12;
+optional int32 maxMultiKillNum = 13;
+optional int32 supportNum = 14;
+repeated CommonBattleRecord list = 15;
+optional int32 tripleKillNum = 16;
+optional int32 quadraKillNum = 17;
+optional int32 pentaKillNum = 18;
+}
+message CommonBattleRecord {
+optional int32 heroId = 3;
+optional int32 equipSkinId = 4;
+optional int32 killNum = 6;
+optional int32 deadNum = 7;
+optional int64 battleUnix = 8;
+optional int32 id = 9;
+optional bool isWin = 10;
+optional bool isMvp = 11;
+optional int32 assistNum = 12;
+optional bool isTripleKill = 13;
+optional bool isQuadraKill = 14;
+optional bool isPentaKill = 15;
+}
+message UserInfoScoreRequest {
+optional string uid = 1;
+}
+message UserInfoScoreResponse {
+repeated CommonInfoScore list = 1;
+}
+message CommonInfoScore {
+optional BATTLE_TYPE battleType = 1;
+optional int32 score = 2;
+optional int32 index = 3;
+optional int32 fightNum = 4;
+optional int32 winNum = 5;
+}
+message UserInfoHeroRequest {
+optional string uid = 1;
+}
+message UserInfoHeroResponse {
+repeated CommonInfoHero list = 1;
+}
+message CommonInfoHero {
+optional int32 heroId = 1;
+optional int32 equipSkinId = 2;
+optional int32 proficiency = 3;
+optional int32 fightNum = 4;
+optional int32 winNum = 5;
+optional int32 recentlyFightNum = 6;
+optional int32 recentlyWinNum = 7;
+optional int32 index = 8;
+optional int32 maxIndex = 9;
+optional int32 starLevel = 10;
+optional int32 awakeLevel = 11;
+}
+message UserInfoBattleRecordRequest {
+optional int32 id = 1;
+optional string uid = 2;
+}
+message UserInfoBattleRecordResponse {
+optional BattleRecord record = 1;
+}
+message BattleRecord {
+optional BATTLE_TYPE battleType = 1;
+repeated BattleRecordUser battleRecordUserList = 2;
+repeated BattleTeamInfo teamInfoList = 3;
+optional bool isWin = 4;
+optional int32 winTeam = 5;
+optional BATTLE_TYPE rankBattleType = 6;
+}
+message BattleRecordUser {
+optional string uid = 1;
+optional int32 tid = 2;
+optional int32 skinId = 3;
+optional bool isRobot = 4;
+optional string name = 5;
+optional int32 level = 6;
+optional int32 killNum = 7;
+optional int32 deadNum = 8;
+optional int32 assistNum = 9;
+repeated BATTLE_RESULT_TYPE battleResultTypeList = 10;
+optional int32 score = 11;
+optional BLUE_VIP_TYPE blueVipType = 12;
+optional int32 blueVipLevel = 13;
+optional bool isBlueYearVip = 14;
+optional int32 vipLevel = 15;
+}
+message BattleTeamInfo {
+optional int32 tid = 1;
+optional int32 gameScore = 3;
+}
+message ChatInfo {
+optional CHAT_INFO_TYPE infoType = 1;
+optional string text = 2;
+optional string uid = 3;
+optional string name = 4;
+optional int32 level = 5;
+optional int64 headImage = 6;
+optional int32 rankId = 7;
+optional int32 maxRankId = 8;
+optional HORN_Type hornType = 9;
+optional int64 dateline = 10;
+optional bool isSendToAll = 11;
+optional int32 headBoxId = 12;
+optional int32 id = 13;
+optional int32 commander = 14;
+optional CommonArmyRed red = 15;
+optional CHAT_ARMY_TYPE armyType = 16;
+optional int32 vipLevel = 17;
+optional int32 chatBoxId = 18;
+optional CommonArmyRequest armyRequest = 19;
+optional BLUE_VIP_TYPE blueVipType = 20;
+optional int32 blueVipLevel = 21;
+optional bool isBlueYearVip = 22;
+optional ChatTeamApply teamApply = 23;
+optional string ptid = 24;
+}
+message ChatTeamApply {
+optional int64 teamId = 1;
+optional BATTLE_TYPE battleType = 2;
+optional TEAM_TYPE teamType = 3;
+optional bool isBanPick = 4;
+optional string ext = 5;
+}
+message ChatSendRequest {
+optional CHAT_Type chatType = 1;
+optional string text = 2;
+optional string privateUid = 3;
+optional HORN_Type hornType = 4;
+optional bool isSendToAll = 5;
+optional ChatTeamApply teamApply = 6;
+}
+message ChatSendResponse {
+optional CommonUpdate commonUpdate = 4;
+}
+message ChatListRequest {
+optional CHAT_Type chatType = 1;
+optional string privateUid = 2;
+optional int32 start = 3;
+optional int32 end = 4;
+}
+message ChatListResponse {
+repeated ChatInfo chatInfoList = 1;
+}
+message ChatAsynResponse {
+optional CHAT_Type chatType = 1;
+optional ChatInfo chatInfo = 2;
+}
+message ChatPrivateRecentListResponse {
+repeated CommonFriend list = 1;
+}
+message SignRewardResponse {
+optional CommonUpdate commonUpdate = 4;
+}
+message SignTotalRewardRequest {
+optional int32 id = 1;
+}
+message SignTotalRewardResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message CommonDayReward {
+optional int32 day = 1;
+optional CommonItem item = 2;
+optional int32 state = 3;
+}
+message CommonTotalDayReward {
+optional int32 id = 1;
+optional int32 totalDays = 2;
+optional int32 giftId = 3;
+optional int32 state = 4;
+}
+message SignListResponse {
+optional int32 allDays = 1;
+repeated CommonDayReward signRewardList = 2;
+repeated CommonTotalDayReward signTotalRewardList = 3;
+}
+message CommonTaskWeeklyAc {
+optional int32 ac = 1;
+repeated CommonTaskWeeklyAcBox list = 2;
+}
+message CommonTaskWeeklyAcBox {
+optional int32 id = 1;
+optional bool rewardState = 2;
+}
+message CommonTaskDaily {
+optional int32 id = 1;
+optional int32 num = 2;
+optional bool rewardState = 3;
+}
+message TaskDailyListResponse {
+repeated CommonTaskDaily list = 1;
+optional CommonTaskWeeklyAc taskWeeklyAc = 2;
+}
+message ArmyTaskListResponse {
+repeated CommonTaskDaily list = 1;
+optional CommonTaskWeeklyAc taskWeeklyAc = 2;
+}
+message TaskDailyRewardRequest {
+optional int32 id = 1;
+}
+message TaskDailyRewardResponse {
+optional int32 todayAc = 2;
+optional CommonUpdate commonUpdate = 4;
+}
+message ArmyTaskRewardRequest {
+optional int32 id = 1;
+}
+message ArmyTaskRewardResponse {
+optional CommonUpdate commonUpdate = 4;
+}
+message TaskWeeklyAcRewardRequest {
+optional int32 id = 1;
+}
+message TaskWeeklyAcRewardResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message ArmyTaskWeeklyAcRewardRequest {
+optional int32 id = 1;
+}
+message ArmyTaskWeeklyAcRewardResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message CommonNotice {
+optional int32 noticeKey = 1;
+optional bool state = 2;
+}
+message CommonNoticeGg {
+optional int32 id = 1;
+optional string text = 2;
+}
+message NoticeGetResponse {
+repeated CommonNotice commonNoticeList = 1;
+repeated CommonNoticeGg commonNoticeGgList = 2;
+repeated NoticeGetResponse_EventActionNoticeMapEntry eventActionNoticeMap = 3;
+}
+message NoticeGetResponse_EventActionNoticeMapEntry {
+optional int32 key = 1;
+optional bool value = 2;
+}
+message CommonGxGet {
+optional int32 id = 1;
+optional string text = 2;
+}
+message GxGetRequest {
+optional int32 channel = 1;
+}
+message GxGetResponse {
+optional CommonGxGet commonGxGet = 1;
+}
+message ClientErrorRequest {
+optional string code = 1;
+optional int32 errorType = 2;
+optional string fileName = 3;
+}
+message HeadImageChangeRequest {
+optional int64 id = 1;
+}
+message SkinEquipRequest {
+optional int32 skinId = 1;
+}
+message SkinEquipResponse {
+repeated CommonHero heroListUpdate = 1;
+}
+message HeartbeatResponse {
+optional int64 now = 1;
+}
+message ChatTextCheckRequest {
+optional string text = 1;
+}
+message ChatTextCheckResponse {
+optional string text = 1;
+optional bool hasDirty = 2;
+}
+message ExchangeCodeRequest {
+optional string code = 1;
+}
+message ExchangeCodeResponse {
+optional CommonUpdate commonUpdate = 4;
+}
+message ItemNumListRequest {
+optional ITEM_TYPE ItemType = 1;
+}
+message ItemNumListResponse {
+repeated CommonItem itemList = 1;
+}
+message ItemNumRequest {
+optional ITEM_TYPE ItemType = 1;
+optional int32 ItemId = 2;
+}
+message ItemNumResponse {
+optional CommonItem item = 1;
+}
+message HeadImageBuyRequest {
+optional int64 headImageId = 1;
+}
+message HeadImageBuyResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message CommonArmy {
+optional int32 id = 1;
+optional string name = 2;
+optional string commanderName = 3;
+optional int32 limitRankId = 4;
+optional int32 num = 5;
+optional string notice = 6;
+optional string commanderUid = 7;
+optional int32 icon = 8;
+optional string iconText = 9;
+}
+message CommonArmyUser {
+optional string uid = 1;
+optional string name = 2;
+optional int32 commander = 3;
+optional int32 level = 4;
+optional int32 rankId = 5;
+optional int32 weekDevoteValue = 6;
+optional int32 allDevoteValue = 7;
+optional int64 headImage = 8;
+optional int32 headBoxId = 9;
+optional int32 vipLevel = 10;
+optional BLUE_VIP_TYPE blueVipType = 11;
+optional int32 blueVipLevel = 12;
+optional bool isBlueYearVip = 13;
+optional int64 lastLogoutUnix = 14;
+}
+message ArmyCreateRequest {
+optional string name = 1;
+optional bool IsUseDiam = 2;
+}
+message ArmyCreateResponse {
+optional CommonArmy army = 1;
+optional int32 myCommander = 2;
+optional CommonUpdate commonUpdate = 4;
+optional int32 freeCount = 6;
+optional int64 lastSignInUnix = 7;
+}
+message ArmyJoinRequest {
+optional int32 armyId = 1;
+}
+message ArmyJoinResponse {
+optional CommonArmy army = 1;
+optional int32 myCommander = 2;
+optional CommonUpdate commonUpdate = 4;
+optional int32 freeCount = 6;
+optional int64 lastSignInUnix = 7;
+}
+message ArmyKickRequest {
+optional string kickUid = 1;
+}
+message HeadBoxChangeRequest {
+optional int32 headBoxId = 1;
+}
+message ArmySearchRequest {
+optional string searchName = 1;
+}
+message ArmySearchResponse {
+repeated CommonArmy armyList = 1;
+}
+message ArmyInfoResponse {
+optional int32 armyId = 1;
+optional CommonArmy army = 2;
+optional int32 myCommander = 3;
+repeated CommonArmy armyList = 4;
+optional int32 freeCount = 5;
+optional int32 rank = 6;
+optional int32 allDevoteValue = 7;
+optional int32 weekDevoteValue = 8;
+optional int64 lastSignInUnix = 9;
+optional bool IsArmyRedNotice = 10;
+optional int32 armyFunding = 11;
+}
+message ArmyListRequest {
+optional int32 start = 1;
+optional int32 end = 2;
+}
+message ArmyListResponse {
+repeated CommonArmy armyList = 5;
+}
+message ArmyUserListResponse {
+repeated CommonArmyUser armyUserList = 5;
+}
+message ArmyRenameRequest {
+optional string name = 1;
+}
+message ArmyRenameResponse {
+optional CommonUpdate commonUpdate = 4;
+}
+message ArmyRankIdSetRequest {
+optional int32 randId = 1;
+}
+message ArmyCommanderSetRequest {
+optional string setUid = 1;
+optional int32 commander = 2;
+}
+message ArmyTransferRequest {
+optional string transferUid = 1;
+}
+message ArmyNoticeSetRequest {
+optional string notice = 1;
+}
+message CommonDevoteRewardState {
+optional int32 id = 1;
+optional bool rewardState = 2;
+}
+message CommonDevoteNum {
+optional int32 id = 1;
+optional int32 num = 2;
+}
+message ArmyDevoteInfoResponse {
+optional int32 weekDevoteValue = 1;
+repeated CommonDevoteRewardState rewardStateList = 2;
+repeated CommonDevoteNum numList = 3;
+optional int32 armyWeekDevoteValue = 4;
+optional int32 armyRank = 5;
+optional int32 armyFunding = 6;
+}
+message ArmyChatInfoListRequest {
+optional int32 startId = 1;
+optional int32 num = 2;
+optional bool isChatTypeNormal = 3;
+optional bool isOverView = 4;
+}
+message ArmyChatInfoListResponse {
+repeated ChatInfo chatInfoList = 1;
+optional int32 freeCount = 2;
+optional int64 requestUnix = 3;
+optional int32 requestHelpNum = 4;
+}
+message ArmyRedSendRequest {
+optional int32 index = 1;
+}
+message ArmyRedSendResponse {
+optional CommonUpdate commonUpdate = 2;
+optional int32 AllSendRedCoin = 3;
+optional int32 armyFunding = 1;
+}
+message ArmyRankListRequest {
+optional int32 rankSubType = 2;
+optional int32 startRank = 4;
+optional int32 endRank = 5;
+}
+message ArmyRankListResponse {
+optional CommonArmyRank myRankInfo = 1;
+repeated CommonArmyRank rankList = 2;
+}
+message CommonArmyRank {
+optional int32 rank = 1;
+optional string name = 2;
+optional string commanderName = 3;
+optional int32 value1 = 4;
+optional int32 value2 = 5;
+optional int32 icon = 6;
+optional string iconText = 7;
+optional BLUE_VIP_TYPE blueVipType = 8;
+optional int32 blueVipLevel = 9;
+optional bool isBlueYearVip = 10;
+optional int32 vipLevel = 11;
+optional string commanderUid = 12;
+}
+message CommonArmyRed {
+optional int32 money = 1;
+optional int32 redNum = 2;
+repeated string uidList = 3;
+optional ARMY_RED_TYPE armyRedType = 4;
+}
+message ArmyDevoteSendRequest {
+optional int32 id = 1;
+}
+message ArmyDevoteSendResponse {
+optional CommonUpdate commonUpdate = 2;
+optional int32 weekDevoteValue = 3;
+optional int32 armyWeekDevoteValue = 4;
+optional int32 armyFunding = 5;
+}
+message ArmyDevoteRewardRequest {
+optional int32 id = 1;
+}
+message ArmyDevoteRewardResponse {
+optional CommonUpdate commonUpdate = 2;
+}
+message ArmyRedGetRequest {
+optional int32 id = 1;
+}
+message ArmyRedGetResponse {
+optional CommonUpdate commonUpdate = 2;
+repeated CommonArmyRedLog list = 3;
+optional ARMY_RED_GET_STATE getState = 4;
+}
+message ArmyRedInfoRequest {
+optional int32 id = 1;
+}
+message ArmyRedInfoResponse {
+repeated CommonArmyRedLog list = 1;
+}
+message CommonArmyRedLog {
+optional int64 headImage = 1;
+optional string name = 2;
+optional int32 coin = 3;
+optional int64 getTimeUnix = 4;
+optional string uid = 5;
+optional int32 headBoxId = 6;
+optional int32 vipLevel = 7;
+optional BLUE_VIP_TYPE blueVipType = 8;
+optional int32 blueVipLevel = 9;
+optional bool isBlueYearVip = 10;
+optional ARMY_RED_TYPE armyRedType = 11;
+}
+message CommonArmyShop {
+optional int32 id = 1;
+optional bool isBuy = 2;
+}
+message ArmyShopListResponse {
+optional int64 refreshUnix = 1;
+repeated CommonArmyShop list = 2;
+}
+message ArmyShopBuyRequest {
+optional int32 id = 1;
+}
+message ArmyShopBuyResponse {
+optional CommonUpdate commonUpdate = 2;
+}
+message ArmyShopRefreshResponse {
+optional int64 refreshUnix = 1;
+repeated CommonArmyShop list = 2;
+optional CommonUpdate commonUpdate = 3;
+}
+message ArmyUserOnlineListResponse {
+repeated CommonFriend list = 1;
+}
+message ArmySetIconTextRequest {
+optional string text = 1;
+}
+message CommonLuck {
+optional bool status = 1;
+optional int32 baoKuValue = 2;
+optional bool baoKuStatus = 3;
+optional int32 refreshTimes = 4;
+optional int64 freeUnix = 5;
+repeated CommonLuckItem luckItemlist = 6;
+}
+message CommonLuckItem {
+optional int32 id = 1;
+optional int32 index = 2;
+optional CommonItem item = 3;
+optional int32 colour = 4;
+}
+message LuckInfoResponse {
+optional CommonLuck luck = 1;
+}
+message LuckDrawRequest {
+optional int32 index = 1;
+}
+message LuckDrawResponse {
+optional CommonLuck luck = 1;
+optional bool isDoubleReward = 2;
+optional CommonUpdate commonUpdate = 4;
+}
+message LuckStartResponse {
+optional CommonLuck luck = 1;
+optional CommonUpdate commonUpdate = 4;
+}
+message LuckRefreshResponse {
+optional CommonLuck luck = 1;
+optional CommonUpdate commonUpdate = 4;
+}
+message LuckBaoKuDrawResponse {
+repeated CommonLuckItem luckItemList = 1;
+optional CommonUpdate commonUpdate = 3;
+}
+message LuckBroadcastResponse {
+optional string uid = 1;
+optional string name = 2;
+optional CommonItem item = 3;
+}
+message SkinBuyForFriendRequest {
+optional int32 skinId = 1;
+optional string friendUid = 2;
+optional string text = 3;
+optional SHOP_TYPE shopType = 4;
+}
+message SkinBuyForFriendResponse {
+optional CommonUpdate commonUpdate = 2;
+}
+message BattleLikeRequest {
+optional string likeUid = 1;
+optional BATTLE_TYPE battleType = 2;
+optional string fromUid = 3;
+}
+message BattleLikeNoticeResponse {
+optional int32 SupportNum = 1;
+optional string Uid = 2;
+optional string Name = 3;
+}
+message BattleLikeByRobotRequest {
+repeated string robotUidList = 1;
+optional BATTLE_TYPE battleType = 2;
+optional BATTLE_TYPE randBattleType = 3;
+optional TEAM_TYPE teamType = 4;
+optional bool isBanPick = 5;
+}
+message BattleReportRequest {
+optional string reportUid = 1;
+optional BATTLE_TYPE battleType = 2;
+repeated int32 checkBox = 3;
+optional string text = 4;
+optional int64 battleId = 5;
+}
+message LimitActionListResponse {
+repeated CommonLimitAction limitActionList = 1;
+optional int32 selectedId = 2;
+repeated CommonActionCondition actionConditionList = 3;
+repeated CommonActionBoxSlot commonActionBoxSlot = 4;
+repeated CommonActionBox commonActionBox = 5;
+optional CommonLinkage commonLinkage = 6;
+optional bool isLinkage = 7;
+optional bool isFreeOrder = 8;
+}
+message CommonLinkage {
+optional bool isBind = 1;
+optional string pUid = 2;
+optional string pName = 3;
+optional int32 code = 4;
+optional int64 codeUnix = 5;
+}
+message CommonActionBoxSlot {
+optional int32 Id = 1;
+optional int32 Index = 2;
+optional int32 IsOpen = 3;
+}
+message CommonActionBox {
+optional int32 Id = 1;
+optional int32 ActId = 2;
+optional int32 HuoId = 3;
+optional int32 Condition = 4;
+optional int32 ConNumMax = 5;
+optional int32 ConNumMin = 6;
+optional int32 ConNumStart = 7;
+optional int32 Condition2 = 8;
+optional int32 ConNum2Start = 9;
+optional int32 ConNum2End = 10;
+optional int32 ConNum2Cur = 11;
+optional int32 ConNum2 = 12;
+optional int32 Condition2Sub = 13;
+optional int32 Gift = 14;
+optional int32 Time = 15;
+optional int64 RemainUnix = 16;
+optional int32 OpenCostDiam = 17;
+optional int32 SlotIndex = 18;
+optional int32 State = 19;
+}
+message ActionBoxSlotOpenRequest {
+optional int32 Id = 1;
+optional int32 Index = 2;
+}
+message ActionBoxSlotOpenResponse {
+optional CommonUpdate commonUpdate = 1;
+optional CommonActionBoxSlot commonActionBoxSlot = 2;
+}
+message ActionBoxPutInSlotRequest {
+optional int32 Id = 1;
+optional int32 HuoId = 2;
+}
+message ActionBoxPutInSlotResponse {
+optional CommonActionBox Box = 1;
+}
+message ActionBoxOpenRequest {
+optional int32 Id = 1;
+optional int32 HuoId = 2;
+}
+message ActionBoxOpenResponse {
+optional CommonActionBox Box = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+message CommonLimitAction {
+optional int32 actId = 1;
+optional int64 startUnix = 2;
+optional int64 endUnix = 3;
+optional int32 sort = 4;
+optional int32 conditionId = 5;
+optional string name = 6;
+optional string desc = 7;
+optional int32 tag = 8;
+optional bool redPoint = 9;
+}
+message CommonActionCondition {
+optional int32 actId = 1;
+optional int32 conditionId = 2;
+optional int32 subId = 3;
+optional int32 conditionType = 4;
+optional int32 conNum = 5;
+optional int32 conNum2 = 6;
+repeated CommonItem list = 7;
+optional ITEM_TYPE costType = 8;
+optional int32 costId = 9;
+optional int32 costNum = 10;
+optional int32 takeLimit = 11;
+optional int32 curConNum = 12;
+optional int32 curTakeNum = 13;
+optional string tips = 14;
+}
+message ActionConditionListRequest {
+optional int32 actId = 1;
+}
+message ActionConditionListResponse {
+repeated CommonActionCondition actionConditionList = 3;
+repeated CommonActionBoxSlot commonActionBoxSlot = 4;
+repeated CommonActionBox commonActionBox = 5;
+optional CommonLinkage commonLinkage = 6;
+optional bool isLinkage = 7;
+optional bool isFreeOrder = 8;
+}
+message ActionConditionAwardRequest {
+optional int32 actId = 1;
+optional int32 subId = 2;
+}
+message ActionConditionAwardResponse {
+optional CommonUpdate commonUpdate = 2;
+}
+message CommonVip {
+optional int32 vipLevel = 1;
+optional bool giftRewardState = 2;
+optional bool normalGiftRewardState = 3;
+}
+message VipRewardRequest {
+optional int32 vipLevel = 1;
+optional bool isNormalGift = 2;
+}
+message VipRewardResponse {
+optional CommonUpdate commonUpdate = 2;
+}
+message VipInfoResponse {
+repeated CommonVip vipInfoList = 1;
+optional int32 vipShowLevel = 2;
+optional int32 chatBoxId = 3;
+optional int32 rmb = 4;
+optional int32 vipLevel = 12;
+}
+message CommonFirstRecharge {
+optional bool isFirstRecharge = 1;
+optional int32 giftIndex = 2;
+optional int64 limitDisEndTime = 3;
+optional int32 limitHeroId = 4;
+optional int32 limitHeroPrice = 5;
+repeated int32 rechargeList = 6;
+}
+message FirstRechargeRewardRequest {
+optional int32 index = 1;
+}
+message FirstRechargeRewardResponse {
+optional CommonUpdate commonUpdate = 2;
+optional CommonUserLevel userLevelUpdate = 3;
+optional int64 limitDisEndTime = 4;
+}
+message ChatReportRequest {
+optional string reportUid = 1;
+optional bool reportByWhiteList = 2;
+repeated int32 checkBox = 3;
+optional string text = 4;
+optional string chatText = 5;
+optional int64 chatId = 6;
+optional CHAT_Type chatType = 7;
+optional string chatContext = 8;
+}
+message SuiShopBuyRequest {
+optional int32 id = 1;
+}
+message SuiShopBuyResponse {
+optional CommonUpdate commonUpdate = 2;
+}
+message ChatBlackListAddRequest {
+optional string blackUid = 1;
+}
+message ChatBlackListRemoveRequest {
+optional string blackUid = 1;
+}
+message ChatBlackListResponse {
+repeated CommonFriend list = 1;
+}
+message VipShowLevelSetRequest {
+optional int32 vipShowLevel = 1;
+}
+message ChatBoxIdSetRequest {
+optional int32 id = 1;
+}
+message SeasonInfoResponse {
+optional int32 seasonId = 1;
+optional int64 seasonEndUnix = 2;
+optional bool seasonEndIsShow = 3;
+optional int32 curMaxRankScore = 4;
+optional int32 curMaxRankId = 5;
+optional int32 targetMaxRankScore = 6;
+optional int32 seasonFightNum = 7;
+optional int32 seasonWinNum = 8;
+optional int32 seasonMaxMultiWinNum = 9;
+optional int32 award1CurMaxRankScore = 10;
+optional int32 award1TargetMaxRankScore = 11;
+optional int32 award1CurWinNum = 12;
+optional int32 award1TargetWinNum = 13;
+optional int32 award2TargetMaxRankId = 14;
+optional CommonItem award1 = 15;
+optional CommonItem award2 = 16;
+}
+message CommonHeroLuckItem {
+optional int32 id = 1;
+optional CommonItem item = 2;
+}
+message CommonHeroLuck {
+optional int64 refreshUnix = 1;
+repeated CommonHeroLuckItem itemList = 2;
+}
+message HeroLuckInfoResponse {
+optional CommonHeroLuck heroLuck = 1;
+}
+message HeroLuckDrawRequest {
+optional bool isDrawTenTimes = 1;
+}
+message HeroLuckDrawResponse {
+repeated int32 heroLuckRewardIdList = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+message HeroLuckRefreshResponse {
+optional CommonHeroLuck heroLuck = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+message CommonMonthCard {
+optional int32 buyNum = 1;
+optional int64 endUnix = 2;
+optional int32 takeNum = 3;
+optional int32 days = 4;
+}
+message MonthCardInfoResponse {
+optional CommonMonthCard card = 1;
+}
+message MonthCardBuyResponse {
+optional CommonMonthCard card = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+message MonthCardBuyForFriendRequest {
+optional string friendUid = 1;
+}
+message MonthCardBuyForFriendResponse {
+optional CommonMonthCard card = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+message MonthCardTakeRewardResponse {
+optional CommonMonthCard card = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+message CommonArmyRequestHelp {
+optional string uid = 1;
+optional int64 unix = 2;
+}
+message CommonArmyRequestHelpInfo {
+optional string uid = 1;
+optional int64 unix = 2;
+optional string name = 3;
+optional int64 headImage = 4;
+optional int32 headBoxId = 5;
+optional int32 vipLevel = 6;
+optional BLUE_VIP_TYPE blueVipType = 7;
+optional int32 blueVipLevel = 8;
+optional bool isBlueYearVip = 9;
+}
+message CommonArmyRequest {
+optional int32 goodId = 1;
+repeated CommonArmyRequestHelp helpList = 3;
+}
+message ArmyRequestRequest {
+optional int32 armyGoodId = 1;
+}
+message ArmyRequestHelpRequest {
+optional int32 id = 1;
+}
+message ArmyRequestHelpResponse {
+optional CommonArmyRequest armyRequest = 1;
+optional CommonUpdate commonUpdate = 2;
+repeated CommonArmyRequestHelpInfo helpInfoList = 3;
+optional CommonUserLevel userLevelUpdate = 4;
+}
+message ArmyRequestInfoRequest {
+optional int32 id = 1;
+}
+message ArmyRequestInfoResponse {
+repeated CommonArmyRequestHelpInfo helpInfoList = 3;
+}
+message TeamRobotAddRequest {
+optional int32 tId = 1;
+optional string ext = 2;
+}
+message TeamRobotRemoveRequest {
+optional int32 tId = 1;
+optional int32 pos = 2;
+}
+message TeamPosChangeRequest {
+optional int32 tId = 1;
+optional int32 pos = 2;
+}
+message HeroBattleInfoRequest {
+optional int32 heroBattleId = 1;
+}
+message HeroBattleInfoResponse {
+optional int32 myRank = 1;
+optional int32 myScore = 2;
+optional int32 todayChallengeNum = 3;
+optional int32 todayChallengeNumLimit = 4;
+optional int32 challengeNum = 5;
+repeated int32 takeRewardIdList = 6;
+optional BATTLE_TYPE todayBattleType = 7;
+}
+message HeroBattleRewardRequest {
+optional int32 id = 1;
+}
+message HeroBattleRewardResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message HeroBattleRankListRequest {
+optional int32 id = 1;
+optional int32 startRank = 2;
+optional int32 endRank = 3;
+}
+message HeroBattleRankListResponse {
+optional CommonHeroBattleRank myRankInfo = 1;
+repeated CommonHeroBattleRank rankList = 2;
+}
+message CommonHeroBattleRank {
+optional int32 rank = 1;
+optional string name = 2;
+optional int32 level = 3;
+optional string value1 = 4;
+optional int32 value2 = 5;
+optional string uid = 6;
+optional int32 vipLevel = 7;
+optional BLUE_VIP_TYPE blueVipType = 8;
+optional int32 blueVipLevel = 9;
+optional bool isBlueYearVip = 10;
+}
+message ClientJsonGetSuiShopResponse {
+repeated CommonSuiShop list = 1;
+}
+message CommonSuiShop {
+optional int32 Id = 1;
+optional int32 Pid = 2;
+optional int32 Type = 3;
+optional int32 TypeId = 4;
+optional int32 Num = 5;
+optional int32 ItemId = 6;
+optional int32 ItemNum = 7;
+}
+message LuckItemListConfigResponse {
+repeated CommonLuckItem list = 1;
+}
+message ClientJsonGetHeroBattleResponse {
+repeated CommonHeroBattle list = 1;
+}
+message CommonHeroBattle {
+optional int32 Id = 1;
+optional int32 HeroId = 2;
+optional string StartTime = 3;
+optional string Start = 4;
+optional string EndTime = 5;
+optional string End = 6;
+optional string Name = 7;
+}
+message BattleDelayRequest {
+optional string host = 1;
+optional int32 HeartBeatNum = 2;
+optional int32 DelayNum1 = 3;
+optional int32 DelayNum2 = 4;
+optional int32 DelayNum3 = 5;
+optional int32 FPS = 6;
+optional int32 FPS1 = 7;
+optional int32 FPS2 = 8;
+optional int32 FPS3 = 9;
+optional int32 FPS4 = 10;
+}
+message UserListRequest {
+repeated string uidList = 1;
+}
+message UserListResponse {
+repeated CommonFriend list = 1;
+}
+message CommonExclusiveAwardTab {
+optional EXCLUSIVE_AWARD_TYPE Type = 1;
+optional string Name = 2;
+optional bool redPoint = 3;
+}
+message CommonQQAwardCondition {
+optional int32 Id = 1;
+optional EXCLUSIVE_AWARD_TYPE Type = 2;
+optional int32 Lv = 3;
+optional ITEM_TYPE ItemType = 4;
+optional int32 ItemId = 5;
+optional int32 ItemNum = 6;
+optional EXCLUSIVE_AWARD_TAKE_TYPE takeType = 7;
+optional int32 BlueVip = 8;
+}
+message CommonWeAwardCondition {
+optional int32 Id = 1;
+optional EXCLUSIVE_AWARD_TYPE Type = 2;
+optional int32 Lv = 3;
+optional ITEM_TYPE ItemType = 4;
+optional int32 ItemId = 5;
+optional int32 ItemNum = 6;
+optional EXCLUSIVE_AWARD_TAKE_TYPE takeType = 7;
+}
+message ClientJsonGetQQAwardRequest {
+optional bool isBlueVip = 1;
+}
+message ClientJsonGetQQAwardResponse {
+repeated CommonExclusiveAwardTab tabList = 1;
+repeated CommonQQAwardCondition conditionList = 2;
+}
+message ClientJsonGetWeAwardResponse {
+repeated CommonExclusiveAwardTab tabList = 1;
+repeated CommonWeAwardCondition conditionList = 2;
+}
+message QQAwardReceiveRequest {
+optional int32 awardId = 1;
+optional bool isBlueVip = 2;
+}
+message WeAwardReceiveRequest {
+optional int32 awardId = 1;
+}
+message QQAwardReceiveResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message WeAwardReceiveResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message RechargeResponse {
+optional CommonFirstRecharge commonFirstRecharge = 1;
+optional CommonMonthCard card = 2;
+optional CommonUpdate commonUpdate = 3;
+optional int32 rmb = 4;
+optional int32 vipLevel = 12;
+optional int32 rechargeId = 13;
+}
+message CommonLimitDis {
+optional int32 id = 1;
+optional ITEM_TYPE itemType = 2;
+optional int32 itemId = 3;
+optional int32 itemNum = 4;
+optional int32 pId = 5;
+optional int32 diamDis = 6;
+}
+message ClientJsonGetLimitDisResponse {
+repeated CommonLimitDis list = 1;
+}
+message LimitDisBuyRequest {
+optional int32 id = 1;
+}
+message LimitDisBuyResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message HeroUpgradeStarRequest {
+optional int32 heroId = 1;
+optional bool isUseUniversal = 2;
+}
+message HeroUpgradeStarResponse {
+repeated CommonHero HeroListUpdate = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+message HeroUpgradeStarQuickRequest {
+optional int32 heroId = 1;
+optional bool isUseUniversal = 2;
+}
+message HeroUpgradeStarQuickResponse {
+repeated CommonHero HeroListUpdate = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+message ReceivePVEAwardRequest {
+optional bool isTeam = 1;
+}
+message ReceivePVEAwardResponse {
+optional int32 takeNum = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+message DNDSetRequest {
+optional bool isDND = 1;
+}
+message PVEAwardInfoRequest {
+optional bool isTeam = 1;
+}
+message PVEAwardInfoResponse {
+optional int32 takeNum = 1;
+repeated int32 heroIdList = 2;
+repeated int32 roundList = 3;
+}
+message CommonHeroLotteryItem {
+optional int32 id = 1;
+optional CommonItem item = 2;
+optional LOTTERY_TYPE lotteryType = 3;
+}
+message HeroLotteryInfoResponse {
+repeated CommonHeroLotteryItem heroLotteryList = 1;
+optional int32 value = 2;
+optional int32 DrawNum = 3;
+}
+message HeroLotteryRewardRequest {
+optional LOTTERY_TYPE lotteryType = 1;
+optional int32 multi = 2;
+}
+message HeroLotteryRewardResponse {
+repeated int32 idList = 1;
+optional CommonUpdate commonUpdate = 2;
+optional int32 value = 3;
+}
+message LuckDialLog {
+optional string uid = 1;
+optional string name = 2;
+optional CommonItem item = 3;
+}
+message LuckDialItem {
+optional int32 id = 1;
+optional CommonItem item = 2;
+}
+message LuckyDialInfoResponse {
+optional int32 ingotNum = 1;
+repeated LuckDialItem luckDialItemList = 2;
+repeated LuckDialLog luckDialLogList = 3;
+}
+message LuckyDialRewardResponse {
+optional int32 id = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+message MedalRecommendRequest {
+optional int32 heroId = 1;
+}
+message MedalRecommendLookRequest {
+optional string uid = 1;
+optional int32 heroId = 2;
+}
+message MedalRecommendLookResponse {
+optional string medal = 1;
+}
+message MedalRecommendLikeRequest {
+optional string uid = 1;
+optional int32 heroId = 2;
+}
+message MedalRecommendLikeResponse {
+optional int32 num = 1;
+}
+message MedalRecommendUnlikeRequest {
+optional string uid = 1;
+optional int32 heroId = 2;
+}
+message MedalRecommendUnlikeResponse {
+optional int32 num = 1;
+}
+message MedalRecommendFirstRequest {
+optional int32 heroId = 1;
+}
+message MedalRecommendFirstResponse {
+optional string medal = 1;
+optional string name = 2;
+}
+message MedalPageBindRequest {
+optional int32 heroId = 1;
+optional int32 pageId = 2;
+}
+message MedalPageBindResponse {
+repeated CommonHero heroListUpdate = 1;
+optional CommonMedalPage commonMedalPage = 2;
+repeated CommonMedalAdorn commonMedalAdornList = 3;
+}
+message MedalBatchPriceResponse {
+repeated MedalBatchPriceResponse_MedalBatchPriceEntry medalBatchPrice = 1;
+}
+message MedalBatchPriceResponse_MedalBatchPriceEntry {
+optional int32 key = 1;
+optional int32 value = 2;
+}
+message BattleBanRequest {
+optional int64 battleId = 1;
+optional int32 heroId = 2;
+}
+message BattlePickRequest {
+optional int64 battleId = 1;
+optional int32 heroId = 2;
+optional int32 skinId = 3;
+optional string borrowUid = 4;
+}
+message BattlePreReadyRequest {
+optional int64 battleId = 1;
+repeated int32 armsSkillIdList = 2;
+}
+message BattleHelpRequest {
+optional int64 battleId = 1;
+optional string helpUid = 2;
+}
+message BattleBanPickSwitchRequest {
+optional int64 battleId = 1;
+optional BAN_PICK_SWITCH_TYPE switchType = 2;
+optional int32 switchHeroId = 3;
+optional int32 switchSkinId = 4;
+optional string switchBorrowUid = 5;
+}
+message BattleBanPickSwitchResponse {
+optional string uid = 1;
+optional BAN_PICK_SWITCH_TYPE switchType = 2;
+optional int32 switchHeroId = 3;
+optional int32 switchSkinId = 4;
+optional string switchBorrowUid = 5;
+}
+message AchievementLevelAwardRequest {
+optional int32 achievementlevId = 1;
+}
+message AchievementLevelAwardResponse {
+optional CommonUpdate commonUpdate = 4;
+}
+message AchievementLevelListRequest {
+optional string uid = 1;
+}
+message AchievementLevelListResponse {
+repeated CommonAchievement commonAchievement = 1;
+repeated CommonAchievementLevel commonAchievementLevel = 2;
+optional int32 playerLevel = 3;
+optional int32 count = 4;
+optional int32 rank = 5;
+}
+message CommonAchievementLevel {
+optional int32 achievementLevelId = 1;
+optional int32 rewardState = 3;
+}
+message ClientJsonGetLuckRechargeResponse {
+optional int32 rmb = 1;
+optional int32 days = 2;
+optional EXCLUSIVE_AWARD_TAKE_TYPE reward1Taked = 3;
+optional EXCLUSIVE_AWARD_TAKE_TYPE reward2Taked = 4;
+optional bool luckRechargeNeedOpen = 5;
+optional int64 endUnix = 6;
+optional int32 reward1 = 7;
+optional int32 reward2 = 8;
+}
+message LuckRechargeRewardTakeRequest {
+optional int32 idx = 1;
+}
+message LuckRechargeRewardTakeResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message CostSurprisesInfoResponse {
+repeated CommonCostSurprisesInfo commonCostSurprisesInfo = 1;
+}
+message CostSurprisesAwardRequest {
+optional COST_SURPRISES_TYPE type = 1;
+}
+message CostSurprisesAwardResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message CommonCostSurprisesInfo {
+optional COST_SURPRISES_TYPE type = 1;
+optional int32 cost = 2;
+optional int32 times = 3;
+repeated CommonItem itemList = 4;
+}
+message CommonFeatureTime {
+optional int32 id = 1;
+optional int64 beginTime = 2;
+optional int64 endTime = 3;
+optional string ext = 4;
+optional int64 playerEndTime = 5;
+}
+message FeatureTimeNotifyResponse {
+optional CommonFeatureTime featureTimeData = 1;
+}
+message CommonMysteryStore {
+optional int32 id = 1;
+optional ITEM_TYPE itemType = 2;
+optional int32 itemId = 3;
+optional int32 price = 4;
+}
+message MysteryStoreInfoResponse {
+optional int32 dis = 1;
+repeated CommonMysteryStore commonMysteryStoreList = 2;
+}
+message MysteryStoreDisResponse {
+optional int32 dis = 1;
+repeated CommonMysteryStore commonMysteryStoreList = 2;
+}
+message CrystalDrawRequest {
+optional bool isMulti = 1;
+}
+message CrystalDrawResponse {
+optional int64 crystalDrawFreeUnix = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+message OfficialInfoResponse {
+optional int32 officialId = 1;
+optional int32 itemOffercial = 2;
+optional int32 dbOffercial = 3;
+optional int32 isCanAward = 4;
+}
+message UpOfficialRequest {
+optional int32 officialId = 1;
+optional bool isUseDiam = 2;
+}
+message UpOfficialResponse {
+optional int32 officialId = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+message OfficialAwardResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message LevelAwardListResponse {
+optional int32 userLevel = 1;
+repeated CommonLevelAwardList levelAwardList = 2;
+}
+message CommonLevelAwardList {
+optional int32 id = 1;
+optional int32 level = 2;
+optional bool state = 3;
+}
+message LevelAwardRequest {
+optional int32 level = 1;
+}
+message LevelAwardResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message FinalUserInfo {
+optional string uid = 1;
+optional string name = 2;
+optional int64 headImage = 3;
+optional bool ready = 4;
+}
+message CompetitionFinalNotifyInfoResponse {
+optional int64 finalCompetitionUnix = 1;
+repeated FinalUserInfo finalUserInfoList = 2;
+optional int32 round = 3;
+repeated int32 gameScore = 4;
+optional int64 curTimestamp = 5;
+optional int32 competitionId = 6;
+optional bool noCompetition = 7;
+}
+message CompetitionWinNotifyResponse {
+optional int32 round = 1;
+}
+message CompetitionMatchMapSingle {
+repeated FinalUserInfo userList = 1;
+optional bool end = 2;
+repeated int32 gameScore = 3;
+optional int32 matchId = 4;
+optional string winUser = 5;
+}
+message CompetitionMatchMapList {
+repeated CompetitionMatchMapSingle infos = 1;
+}
+message CompetitionMatchMapResponse {
+repeated CompetitionMatchMapResponse_InfosEntry infos = 1;
+optional int32 curRound = 2;
+}
+message CompetitionMatchMapResponse_InfosEntry {
+optional int32 key = 1;
+optional CompetitionMatchMapList value = 2;
+}
+message GotoCompetitionFinalRequest {
+optional string clientVersion = 1;
+}
+message CompetitionBattleInfoResponse {
+optional bool isFinal = 1;
+optional bool isOn = 2;
+optional BATTLE_TYPE randBattleType = 3;
+optional int32 limitBattleNum = 4;
+optional int32 battleNum = 5;
+optional int32 diamPool = 6;
+}
+message CompetitionBetInfoRequest {
+optional int32 round = 1;
+}
+message CompetitionBetInfoSingle {
+optional string chooseUser = 1;
+optional int32 moneyIndex = 2;
+optional int32 matchId = 3;
+}
+message CompetitionBetInfoResponse {
+repeated CompetitionBetInfoSingle infos = 1;
+}
+message CompetitionBetRequest {
+optional int32 matchId = 1;
+optional string chooseUser = 2;
+optional int32 moneyIndex = 3;
+}
+message CompetitionBetResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message CompetitionRandHeroRequest {
+optional ITEM_TYPE itemType = 1;
+}
+message CompetitionRandHeroResponse {
+optional CommonUpdate commonUpdate = 1;
+optional int32 heroId = 2;
+repeated int32 heroList = 3;
+}
+message CommonUserBrief {
+optional int64 headImage = 1;
+optional string name = 2;
+optional string uid = 3;
+optional int32 headBoxId = 4;
+}
+message CommonRechargeBackReward {
+optional int32 backRewardId = 1;
+optional string name = 2;
+}
+message CommonInviteeForInvitorReward {
+optional CommonUserBrief userBrief = 1;
+optional int64 lastLoginUnix = 2;
+optional int32 continuousLoginDays = 3;
+optional bool boxTaked = 4;
+optional int32 limitDays = 5;
+}
+message CommonInviteTask {
+optional int32 id = 1;
+optional int32 num = 2;
+optional int32 limitNum = 3;
+optional bool boxTaked = 4;
+}
+message CommonInviteeRewardInfo {
+optional INVITE_TASK_TYPE taskType = 1;
+repeated CommonInviteTask list = 2;
+}
+message InviteInvitorRewardInfoResponse {
+optional string inviteCode = 1;
+repeated bool boxTakedList = 2;
+repeated CommonInviteeForInvitorReward inviteeInfoList = 3;
+}
+message InviteCodeBindRequest {
+optional string inviteCode = 1;
+}
+message InviteCodeBindResponse {
+optional CommonUserBrief invitor = 1;
+}
+message InviteCodeInvitorResponse {
+optional CommonUserBrief invitor = 1;
+optional bool boxTaked = 2;
+}
+message InviteRechargeBackInfoResponse {
+repeated CommonRechargeBackReward list = 1;
+}
+message InviteInviteeRewardInfoResponse {
+repeated CommonInviteeRewardInfo list = 1;
+}
+message InviteInviteeRewardTakeRequest {
+optional INVITE_TASK_TYPE taskType = 1;
+optional int32 taskId = 2;
+}
+message InviteInviteeRewardTakeResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message InviteInvitorRewardLoginTakeRequest {
+optional string uid = 1;
+}
+message InviteInvitorRewardLoginTakeResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message InviteInvitorRewardBackNumTakeRequest {
+optional int32 num = 1;
+}
+message InviteInvitorRewardBackNumTakeResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message InviteInviteeBindInvitorRewardTakeResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message InviteRechargeBackTakeRequest {
+optional int32 id = 1;
+}
+message InviteRechargeBackTakeResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message CrystalShopInfoResponse {
+optional int64 nextFreshTimeStamp = 1;
+optional int32 crystalIntegral = 2;
+repeated CommonCrystal list = 3;
+}
+message CommonCrystal {
+optional int32 Id = 1;
+optional int32 IsBuy = 2;
+}
+message CrystalShopFreshResponse {
+optional int64 nextFreshTimeStamp = 1;
+optional int32 crystalIntegral = 2;
+repeated CommonCrystal list = 3;
+optional CommonUpdate commonUpdate = 4;
+}
+message CrystalShopBuyRequest {
+optional int32 id = 1;
+}
+message CrystalShopBuyResponse {
+optional CommonUpdate commonUpdate = 1;
+optional int32 crystalIntegral = 2;
+}
+message GrabRedPacketInfoResponse {
+optional int32 grabRedPacketTicket = 1;
+repeated CommonGrabRedPacketLog logs = 2;
+optional int32 todayGetGrabTimes = 3;
+}
+message GrabRedPacketResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message GrabRedPacketShareResponse {
+optional int32 grabRedPacketTicket = 1;
+}
+message CommonGrabRedPacketLog {
+optional int32 id = 1;
+optional string name = 2;
+optional ITEM_TYPE itemType = 3;
+optional int32 itemId = 4;
+optional int32 itemNum = 5;
+optional int64 cTime = 6;
+}
+message LuckTreeInfoResponse {
+optional int32 todayUseTimes = 1;
+optional int32 treeDegree = 2;
+optional int32 signState = 3;
+optional int32 awardState = 4;
+}
+message LuckTreeUseWaterRequest {
+optional int32 id = 1;
+}
+message LuckTreeUseWaterResponse {
+optional int32 treeDegree = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+message LuckTreeSignInResponse {
+optional int32 treeDegree = 1;
+}
+message LuckTreeGetAwardResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message LuckTreeRankRequest {
+optional int32 start = 1;
+optional int32 end = 2;
+}
+message LuckTreeRankResponse {
+optional CommonLuckTreeRank myRank = 1;
+repeated CommonLuckTreeRank List = 3;
+}
+message CommonLuckTreeRank {
+optional int32 rank = 1;
+optional string name = 2;
+optional string uid = 3;
+optional int32 degree = 4;
+}
+message SpringDrawInfoResponse {
+optional ITEM_TYPE itemType = 1;
+optional int32 itemId = 2;
+optional int32 itemNum = 3;
+optional float probability = 4;
+repeated CommonSpringDrawLog logs = 5;
+optional int64 nextFreshTime = 6;
+}
+message SpringDrawResponse {
+optional CommonUpdate commonUpdate = 1;
+optional float probability = 2;
+optional bool isGet = 3;
+optional int32 itemId = 4;
+}
+message CommonSpringDrawLog {
+optional int32 id = 1;
+optional string name = 2;
+optional ITEM_TYPE itemType = 3;
+optional int32 itemId = 4;
+optional int32 itemNum = 5;
+optional int64 cTime = 6;
+}
+message TeamBeginMatchRequest {
+optional int32 plunderArmyId = 1;
+optional int32 plunderDifficulty = 2;
+optional string ext = 3;
+}
+message ArmySignInResponse {
+optional int32 rank = 1;
+optional int32 allDevoteValue = 2;
+optional int32 weekDevoteValue = 3;
+optional int32 armyFunding = 4;
+}
+message ArmyRedBagListResponse {
+repeated ChatInfo redBagList = 1;
+}
+message ArmyWarehouseListResponse {
+repeated CommonWarehouseItem commonWarehouseItemList = 1;
+optional int32 devote = 2;
+}
+message CommonWarehouseItem {
+optional int32 id = 1;
+optional ARMY_WAREHOUSE_FROM_TYPE fromType = 2;
+optional string fromUid = 3;
+optional string fromName = 4;
+optional int32 warehouseItemId = 5;
+optional int64 createUnix = 6;
+}
+message ArmyWarehouseRetrieveRequest {
+optional int32 id = 1;
+}
+message ArmyWarehouseRetrieveResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message ArmyWarehouseDonateRequest {
+optional int32 id = 1;
+}
+message ArmyWarehouseDonateResponse {
+optional CommonUpdate commonUpdate = 1;
+optional CommonWarehouseItem commonWarehouseItem = 2;
+}
+message ArmyBossInfoResponse {
+repeated int32 armyBossUidList = 1;
+repeated int32 materialList = 2;
+optional bool needRevenge = 3;
+}
+message ArmyBossUpgradeRequest {
+optional int32 bossId = 1;
+optional bool useDiam = 2;
+}
+message ArmyBossUpgradeResponse {
+optional int32 armyBossUid = 1;
+repeated int32 materialList = 2;
+optional CommonUpdate commonUpdate = 3;
+}
+message ArmyRevengeListResponse {
+repeated CommonArmyRevenge commonArmyRevengeList = 1;
+}
+message CommonArmyRevenge {
+optional int32 ArmyIconId = 1;
+optional string ArmyIconName = 2;
+optional int32 ArmyId = 3;
+optional string ArmyName = 4;
+optional int32 LimitNum = 5;
+optional int32 Num = 6;
+}
+message ArmyPlunderResurrectInfoRequest {
+optional int32 bossId = 1;
+optional int64 battleId = 2;
+}
+message ArmyPlunderResurrectInfoResponse {
+optional int32 num = 1;
+}
+message ArmyPlunderResurrectRequest {
+optional int32 bossId = 1;
+optional int64 battleId = 2;
+}
+message ArmyPlunderResurrectResponse {
+optional bool canResurrect = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+message ArmyPlunderRewardRestNumResponse {
+optional int32 limitNum = 1;
+optional int32 num = 2;
+}
+message CommonBoxInfo {
+optional int32 id = 1;
+optional int32 boxTypeId = 2;
+}
+message CommonBoxSlotInfo {
+optional int32 slotId = 1;
+optional int32 boxTypeId = 2;
+optional int64 getUnix = 3;
+optional bool isOpen = 4;
+}
+message BattleBoxIntoSlotRequest {
+optional int32 id = 1;
+}
+message BattleBoxInfoResponse {
+repeated CommonBattleTimesInfo battleTimesInfoList = 1;
+repeated CommonBoxInfo commonBoxInfo = 2;
+repeated CommonBoxSlotInfo commonBoxSlotInfo = 3;
+}
+message CommonBattleTimesInfo {
+optional int32 battleTimes = 1;
+optional int32 conditionType = 2;
+}
+message BattleBoxSlotOpenRequest {
+optional int32 slotId = 1;
+}
+message BattleBoxAwardRequest {
+optional int32 slotId = 1;
+}
+message BattleBoxAwardResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message BattleBoxDeleteRequest {
+optional int32 id = 1;
+}
+message CommonChessboardDiceInfo {
+optional int32 Id = 1;
+optional int32 GainNum = 2;
+optional bool IsTake = 3;
+}
+message ChessboardDiceInfoResponse {
+repeated CommonChessboardDiceInfo list = 1;
+optional int32 chessboardId = 2;
+}
+message ChessboardDiceDoResponse {
+optional int32 chessboardId = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+message ChessboardDiceAwardRequest {
+optional int32 id = 1;
+}
+message ChessboardDiceAwardResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message BattleTypeInfoResponse {
+optional int64 nextChangeUnix = 1;
+optional int32 challengeTimes = 2;
+}
+message HonorScoreQueryRequest {
+optional string Uid = 1;
+}
+message HonorScoreQueryResponse {
+optional int32 curHonorScore = 1;
+optional int32 lastWeekHonorScore = 2;
+}
+message HonorScoreLogQueryRequest {
+optional string Uid = 1;
+}
+message HonorScoreLogQueryResponse {
+repeated CommonHonorScoreLog list = 1;
+}
+message CommonHonorScoreLog {
+optional int64 createTime = 1;
+optional int32 scoreChange = 2;
+optional int32 curScore = 3;
+optional string reason = 4;
+}
+message CommonVipStoneBase {
+optional int32 vipStoneLv = 1;
+optional int32 needVip = 2;
+optional int32 needStone = 3;
+optional int32 rewardStone = 4;
+optional int32 state = 5;
+}
+message CommonVipStoneTask {
+optional int32 id = 1;
+optional int32 vipStoneLv = 2;
+optional EXCLUSIVE_AWARD_TAKE_TYPE state = 3;
+optional int32 condition = 4;
+optional int32 parameter = 5;
+optional int32 rewardStone = 6;
+optional int32 progress = 7;
+}
+message CommonVipStoneInfo {
+optional CommonVipStoneBase commonVipStoneBase = 1;
+repeated CommonVipStoneTask commonVipStoneTaskList = 2;
+}
+message VipStoneInfoResponse {
+repeated CommonVipStoneInfo commonVipStoneInfoList = 1;
+}
+message VipStoneBuyRequest {
+optional int32 vipStoneLv = 1;
+}
+message VipStoneBuyResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message VipStoneRewardTakeRequest {
+optional int32 id = 1;
+}
+message VipStoneRewardTakeResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message HeroYUANStarBagResponse {
+optional int64 countdown = 1;
+}
+message HeroYUANStarBagBuyResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message DoubleBuffNotifyResponse {
+optional int32 buffType = 1;
+optional int64 countdown = 2;
+}
+message FriendShopBuyRequest {
+optional int32 id = 1;
+optional int32 num = 2;
+}
+message FriendShopBuyResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message FriendSendCoinRequest {
+optional string uid = 1;
+}
+message FriendSendCoinResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message FriendShopInfoResponse {
+repeated CommonShop list = 1;
+}
+message FriendRelationInfo {
+optional int32 relationship = 1;
+optional int32 relationshipRequest = 2;
+optional int64 relationshipDelUnix = 3;
+optional string friendUid = 4;
+}
+message FriendApplyRelationRequest {
+optional string friendUid = 1;
+optional int32 relation = 2;
+}
+message FriendApplyRelationResponse {
+optional FriendRelationInfo friendRelationInfo = 1;
+}
+message FriendDeleteRelationRequest {
+optional string friendUid = 1;
+}
+message FriendDeleteRelationResponse {
+optional FriendRelationInfo friendRelationInfo = 1;
+}
+message FriendConfirmRefuseRelationshipRequest {
+optional string friendUid = 1;
+}
+message FriendConfirmRefuseRelationshipResponse {
+optional FriendRelationInfo friendRelationInfo = 1;
+}
+message FriendReplyRelationRequest {
+optional string friendUid = 1;
+optional bool isAgree = 2;
+}
+message FriendReplyRelationResponse {
+optional FriendRelationInfo friendRelationInfo = 1;
+}
+message FriendRelationListResponse {
+repeated CommonFriend list = 1;
+}
+message commonLimitBox {
+optional int32 id = 1;
+optional int32 boxId = 2;
+optional int32 extra = 3;
+optional int64 Countdown = 4;
+}
+message LimitBoxInfoResponse {
+repeated commonLimitBox list = 1;
+}
+message LimitBoxBuyRequest {
+optional int32 id = 1;
+optional int32 boxType = 2;
+}
+message LimitBoxBuyResponse {
+optional CommonUpdate commonUpdate = 1;
+optional int32 maxId = 2;
+optional int64 minExpireUnix = 3;
+}
+message LimitBoxGetResponse {
+optional int32 maxId = 1;
+optional int64 minExpireUnix = 2;
+}
+message PassportBuyLevelRequest {
+optional int32 num = 1;
+}
+message PassportPromotionForFriendRequest {
+optional string targetUid = 1;
+}
+message PassportShopBuyRequest {
+optional int32 id = 1;
+optional int32 num = 2;
+}
+message PassportInfoResponse {
+optional int32 termId = 1;
+optional int32 grade = 2;
+optional int32 lv = 3;
+optional int32 exp = 4;
+optional int64 endTime = 5;
+optional int32 awardNormal = 6;
+optional int32 awardGood = 7;
+optional int32 awardPerfect = 8;
+}
+message PassportBuyLevelResponse {
+optional CommonUpdate commonUpdate = 1;
+optional int32 newLevel = 2;
+}
+message PassportPromotionResponse {
+optional CommonUpdate commonUpdate = 1;
+optional int32 newLevel = 2;
+optional int32 newGrade = 3;
+}
+message PassportPromotionForFriendResponse {
+optional CommonUpdate commonUpdate = 1;
+optional int32 grade = 2;
+}
+message PassportGradeGetRequest {
+optional string reqUid = 1;
+}
+message PassportGradeGetResponse {
+optional int32 grade = 1;
+}
+message PassportLvAwardQuickGetRequest {
+optional int32 takeLv = 1;
+optional int32 grade = 2;
+}
+message PassportLvAwardQuickGetResponse {
+optional CommonUpdate commonUpdate = 1;
+optional int32 awardNormal = 2;
+optional int32 awardGood = 3;
+optional int32 awardPerfect = 4;
+}
+message PassportShopInfoResponse {
+repeated CommonPassportShop list = 1;
+}
+message PassportShopBuyResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message PassportTaskListResponse {
+repeated CommonPassportTask list = 1;
+optional int32 weekAddExp = 2;
+}
+message CommonPassportShop {
+optional int32 id = 1;
+optional int32 buyNum = 2;
+}
+message CommonPassportTask {
+optional int32 id = 1;
+optional int32 finishNum = 2;
+optional int32 progress = 3;
+}
+message AnniversaryInfoRequest {
+optional FEATURE_TIME_KEY activityId = 1;
+}
+message AnniversaryInfoResponse {
+optional bool takeStatus = 1;
+optional int32 takeIndex = 2;
+repeated int32 giftIdList = 3;
+optional int64 registerUnix = 4;
+optional int32 gameTime = 5;
+optional CommonInfoHero MaxWinRateHero = 6;
+repeated CommonInfoHero MaxProficiencyHeroList = 7;
+optional int32 heroNum = 8;
+optional int32 skinNum = 9;
+}
+message AnniversaryDaysAwardRequest {
+optional FEATURE_TIME_KEY activityId = 1;
+optional int32 selectGiftId = 2;
+}
+message AnniversaryDaysAwardResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message AnniversaryDrawAwardResponse {
+optional int32 drawNum = 1;
+optional CommonUpdate commonUpdate = 2;
+optional int32 drawId = 3;
+}
+message ArrowDrawInfoResponse {
+repeated int32 idList = 1;
+optional int32 group = 2;
+optional int32 round = 3;
+optional int32 DrawNum = 4;
+}
+message ArrowDrawResponse {
+optional int32 lotteryId = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+message HeroExclusiveExchangeRequest {
+optional int32 id = 1;
+}
+message HeroExclusiveExchangeResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message CommonBattleBubble {
+optional int32 bubbleType = 1;
+optional int32 bubbleId = 2;
+optional int64 expireTime = 3;
+optional bool isBuy = 4;
+optional int32 heroId = 5;
+}
+message BattleBubbleListResponse {
+repeated CommonBattleBubble list = 1;
+}
+message BattleBubbleBuyRequest {
+optional int32 num = 1;
+optional int32 bubbleUid = 2;
+}
+message BattleBubbleBuyResponse {
+optional CommonUpdate commonUpdate = 1;
+optional CommonBattleBubble commonBattleBubble = 2;
+}
+message BattleBubbleUseRequest {
+optional int32 num = 1;
+optional int32 bubbleUid = 2;
+}
+message BattleBubbleUseResponse {
+optional CommonUpdate commonUpdate = 1;
+optional CommonBattleBubble commonBattleBubble = 2;
+optional bool isSale = 3;
+}
+message BattleBubbleSaleRequest {
+optional int32 num = 1;
+optional int32 bubbleUid = 2;
+}
+message BattleBubbleSaleResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message BattleBubbleEquipRequest {
+optional int32 bubbleId = 1;
+repeated int32 heroIdList = 2;
+}
+message BattleBubbleEquipResponse {
+repeated CommonBattleBubble commonBattleBubbleList = 1;
+}
+message HeadBoxBuyRequest {
+optional int32 id = 1;
+}
+message ChatBoxBuyRequest {
+optional int32 id = 1;
+}
+message HeadBoxBuyResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message ChatBoxBuyResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message OnePayInfoResponse {
+optional int32 num = 1;
+}
+message OnePayBuyRequest {
+optional int32 index = 1;
+}
+message OnePayBuyResponse {
+optional int32 num = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+message CommonMysteryStoreLog {
+optional string name = 1;
+optional int32 dis = 2;
+}
+message MysteryStoreLogResponse {
+repeated CommonMysteryStoreLog list = 1;
+}
+message EveryChargeInfoResponse {
+optional int32 rechargeNum = 1;
+repeated int32 takeIdList = 2;
+}
+message EveryChargeAwardRequest {
+optional int32 id = 1;
+}
+message EveryChargeAwardResponse {
+optional CommonUpdate commonUpdate = 1;
+optional EveryChargeInfoResponse info = 2;
+}
+message FourHeroGiftBuyResponse {
+optional CommonUpdate commonUpdate = 1;
+optional int64 countdown = 2;
+}
+message FourHeroGiftNotifyResponse {
+optional int64 countdown = 2;
+}
+message EasyConvertRequest {
+optional int32 id = 1;
+optional int32 num = 2;
+}
+message EasyConvertResponse {
+optional CommonUpdate commonUpdate = 2;
+}
+message CommonEventTask {
+optional int32 id = 1;
+optional int32 conNum = 2;
+optional int32 takeNum = 3;
+optional int64 refreshTime = 4;
+}
+message EventDataInfoRequest {
+optional FEATURE_TIME_KEY featureTimeKey = 1;
+}
+message EventDrawRequest {
+optional FEATURE_TIME_KEY featureTimeKey = 1;
+optional bool multi = 2;
+optional int32 pos = 3;
+optional int32 dropType = 4;
+}
+message EventDataInfoResponse {
+repeated CommonEventTask list = 1;
+optional int32 specialValue = 2;
+repeated CommonItem commonItemList = 3;
+repeated int32 gotIdList = 4;
+repeated int32 gotPosList = 5;
+repeated CommonSpecialGroup specialGroupList = 6;
+optional FEATURE_TIME_KEY featureTimeKey = 7;
+optional int32 convertNum = 8;
+optional int32 JumpId = 9;
+optional int64 Activity89TaskCount = 10;
+optional int32 DrawNum = 11;
+}
+message CommonSpecialGroup {
+optional int32 specialGroup = 1;
+optional int32 specialValue = 2;
+repeated int32 gotIdList = 3;
+repeated int32 gotPosList = 4;
+}
+message EventDrawResponse {
+optional CommonUpdate commonUpdate = 1;
+optional int32 specialValue = 2;
+optional int32 crit = 3;
+optional int32 drawId = 4;
+optional bool isBigCrit = 5;
+}
+message EventTaskTakeRequest {
+optional FEATURE_TIME_KEY featureTimeKey = 1;
+optional int32 taskId = 2;
+optional int32 SelectGiftId = 3;
+}
+message EventTaskTakeResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message CommonEventNoticeLog {
+optional string uid = 1;
+optional string name = 2;
+optional ITEM_TYPE itemType = 3;
+optional int32 itemId = 4;
+optional int32 itemNum = 5;
+optional bool isBigCrit = 6;
+optional int32 eventTaskId = 7;
+}
+message EventNoticeLogRequest {
+optional FEATURE_TIME_KEY featureTimeKey = 1;
+}
+message EventNoticeLogResponse {
+repeated CommonEventNoticeLog list = 1;
+}
+message CommonChemMi {
+optional bool isGiftAward = 1;
+optional bool isAuthPass = 2;
+}
+message ChenMiGiftAwardResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message EmoticonBuyRequest {
+optional int32 EmoticonId = 1;
+optional int32 UnlockPos = 2;
+}
+message EmoticonBuyResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message EventNoviceInfoResponse {
+repeated CommonEventTask list = 1;
+optional int32 eventNoviceActiveDay = 2;
+}
+message EventNoviceAwardRequest {
+optional int32 eventNoviceId = 1;
+optional int32 selectedGiftId = 2;
+}
+message EventNoviceAwardResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message ChipFuseConvertRequest {
+optional int32 id = 1;
+optional int32 times = 2;
+}
+message ChipFuseConvertResponse {
+optional CommonUpdate commonUpdate = 1;
+optional CommonSpecialDrop specialDrop = 2;
+}
+message ChipFuseNoticeLogResponse {
+repeated CommonChipFuseNoticeLog list = 1;
+}
+message CommonChipFuseNoticeLog {
+optional string uid = 1;
+optional string name = 2;
+optional int32 dropId = 3;
+}
+message ChipFuseInfoResponse {
+repeated CommonSpecialDrop list = 1;
+}
+message CommonSpecialDrop {
+optional int32 id = 1;
+optional int32 value = 2;
+}
+message HourlyActivityInfoResponse {
+optional int32 awardTimes = 1;
+}
+message HourlyActivityAwardResponse {
+optional int32 awardTimes = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+message SeasonShopBuyRequest {
+optional int32 id = 1;
+optional int32 num = 2;
+}
+message SeasonShopInfoResponse {
+repeated CommonSeasonShop list = 1;
+}
+message SeasonShopBuyResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message CommonSeasonShop {
+optional int32 id = 1;
+optional int32 buyNum = 2;
+}
+message CompetitionV2AwardRequest {
+optional int32 Id = 1;
+}
+message CompetitionV2AwardResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message CompetitionV2AwardStatusResponse {
+optional int32 Id = 1;
+optional int32 Ranking = 2;
+optional int32 Award = 3;
+}
+message CompetitionV2SignUpResponse {
+optional bool Success = 1;
+}
+message CompetitionV2StatusResponse {
+optional int32 Id = 1;
+optional int32 Status = 2;
+optional int64 StartTime = 3;
+optional int32 Round = 4;
+repeated CompetitionPlayer List = 5;
+optional int32 JsonCompetitionId = 6;
+}
+message CompetitionPlayer {
+optional string Uid = 1;
+optional string Name = 2;
+optional int32 Score = 3;
+optional int32 RoundCount = 4;
+optional int32 Ranking = 5;
+optional bool IsKnockOut = 6;
+optional int32 Round = 7;
+optional int64 UTime = 8;
+}
+message CompetitionV2ExitResponse {
+optional bool Success = 1;
+}
+message CompetitionV2PlayerUpdateResponse {
+optional CompetitionPlayer Player = 1;
+}
+message CompetitionV2SignUpInfoResponse {
+optional int32 PlayerNumber = 1;
+}
+message ChatBanResponse {
+optional bool All = 1;
+optional string Uid = 2;
+optional string Notice = 3;
+}
+message AstrologyAwardRequest {
+optional int32 Confirm = 1;
+}
+message AstrologyAwardResponse {
+optional CommonUpdate commonUpdate = 1;
+optional CommonAstrologyInfo commonAstrologyInfo = 2;
+optional int64 NextResetTimeUnix = 3;
+optional int32 FreeTimes = 4;
+}
+message AstrologyInfoResponse {
+optional CommonAstrologyInfo commonAstrologyInfo = 1;
+optional int64 NextResetTimeUnix = 2;
+repeated int32 AstrologyIdList = 3;
+optional int32 FreeTimes = 4;
+optional CommonUpdate commonUpdate = 5;
+optional int32 GiftId = 6;
+}
+message AstrologySetInfoRequest {
+optional string ClientInfo = 1;
+}
+message AstrologySetInfoResponse {
+optional string ClientInfo = 1;
+}
+message CommonAstrologyInfo {
+optional bool Processing = 1;
+optional string ClientInfo = 2;
+repeated CommonItemDrop ItemList = 4;
+}
+message CommonItemDrop {
+optional int32 DropId = 1;
+optional CommonItem Item = 2;
+}
+message AstrologyExchangeRequest {
+optional int32 AstrologyId = 1;
+}
+message AstrologyExchangeResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message HeroAwakeLevelUpRequest {
+optional int32 HeroId = 1;
+optional bool IsUseUniversal = 2;
+optional bool IsQuick = 3;
+optional int32 UseDiamNum = 4;
+}
+message HeroAwakeLevelUpResponse {
+optional CommonHero commonHero = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+message StoreBuyRequest {
+optional int32 id = 1;
+optional int32 num = 2;
+optional ITEM_TYPE itemType = 3;
+}
+message StoreBuyResponse {
+optional CommonUpdate commonUpdate = 1;
+optional CommonArenaUser commonArenaUser = 2;
+}
+message StoreBuyInfoResponse {
+repeated CommonShop list = 1;
+}
+message CommonShop {
+optional int32 id = 1;
+optional int32 buyNum = 2;
+}
+message FirstRechargeV2AwardRequest {
+optional int32 giftId = 1;
+optional int32 heroId = 2;
+optional int32 diam = 3;
+}
+message FirstRechargeV2AwardResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message FirstRechargeV2InfoResponse {
+repeated CommonFirstRechargeV2Info list = 1;
+}
+message CommonFirstRechargeV2Info {
+optional int32 type = 5;
+optional int32 heroId = 6;
+optional int32 giftId = 1;
+optional int32 originalDiam = 2;
+optional int32 diam = 3;
+optional int64 endUnix = 4;
+optional bool done = 7;
+optional bool isFirstTime = 8;
+}
+message BattleHero {
+optional int32 heroId = 1;
+optional int32 skinId = 2;
+optional int32 proficiency = 3;
+optional int32 starLevel = 4;
+optional int32 awakeLevel = 6;
+optional string borrowUid = 7;
+optional MedalInfo medalInfo = 8;
+repeated int32 talentIdList = 9;
+}
+message FriendHeroInfoResponse {
+optional CommonFriendHero commonFriendHero = 1;
+}
+message GetFriendHeroListRPCRequest {
+optional string uid = 1;
+repeated string uidList = 2;
+optional bool isReward = 3;
+}
+message GetFriendHeroListRPCResponse {
+repeated CommonFriendHero commonFriendHeroList = 1;
+optional int32 friendPointNum = 2;
+}
+message SetFriendHeroRPCRequest {
+optional string uid = 1;
+optional BattleHero battleHero = 2;
+}
+message BorrowFriendHeroRPCRequest {
+optional string uid = 1;
+}
+message BorrowFriendHeroRPCResponse {
+optional BattleHero battleHero = 1;
+}
+message CommonFriendHero {
+optional string uid = 1;
+optional string name = 2;
+optional BattleHero battleHero = 3;
+optional int32 borrowCount = 4;
+optional int32 borrowState = 5;
+}
+message CommonFriendBorrowHero {
+optional BattleHero battleHero = 1;
+optional bool isUse = 2;
+}
+message FriendHeroPageInfoResponse {
+repeated CommonFriendHero commonFriendHeroList = 1;
+repeated FriendHeroPageInfoResponse_FriendHeroBorrowMapEntry friendHeroBorrowMap = 2;
+optional CommonUpdate commonUpdate = 3;
+repeated CommonFriendBorrowHero friendHeroBorrowList = 4;
+repeated CommonFriendHeroBorrowLog friendHeroBorrowLogList = 5;
+}
+message FriendHeroPageInfoResponse_FriendHeroBorrowMapEntry {
+optional string key = 1;
+optional CommonFriendBorrowHero value = 2;
+}
+message FriendHeroSetRequest {
+optional int32 heroId = 1;
+}
+message FriendHeroSetResponse {
+optional CommonFriendHero commonFriendHero = 1;
+}
+message FriendHeroBorrowRequest {
+optional string friendUid = 1;
+}
+message FriendHeroBorrowResponse {
+repeated FriendHeroBorrowResponse_FriendHeroBorrowMapEntry friendHeroBorrowMap = 1;
+repeated CommonFriendBorrowHero friendHeroBorrowList = 2;
+}
+message FriendHeroBorrowResponse_FriendHeroBorrowMapEntry {
+optional string key = 1;
+optional CommonFriendBorrowHero value = 2;
+}
+message CommonFriendHeroBorrowLog {
+optional string uid = 1;
+optional int32 heroId = 2;
+optional int64 borrowTime = 3;
+optional string borrowDate = 4;
+optional string borrowUid = 5;
+optional string name = 6;
+optional int32 skinId = 7;
+}
+message FriendPartnerApplyRequest {
+optional string partnerUid = 1;
+}
+message FriendPartnerReplyRequest {
+optional string partnerUid = 1;
+optional bool isAgree = 2;
+}
+message FriendPartnerApplyListResponse {
+repeated CommonFriend list = 1;
+}
+message CommonTask {
+optional int32 id = 1;
+optional int32 num = 2;
+optional int32 rewardNum = 3;
+}
+message FriendTaskListResponse {
+repeated CommonTask list = 1;
+optional CommonFriend partner = 2;
+}
+message FriendTaskRewardRequest {
+optional int32 id = 1;
+}
+message FriendTaskRewardResponse {
+optional CommonUpdate commonUpdate = 4;
+}
+message BoxAwardResponse {
+optional CommonUpdate commonUpdate = 2;
+}
+message PveBossPageInfoRequest {
+}
+message PveBossPageInfoResponse {
+optional CommonArenaRank myWeekRankInfo = 1;
+repeated CommonArenaRank weekRankList = 2;
+repeated CommonPVEBossBattleInfo infoList = 5;
+optional int32 term = 6;
+optional string serverName = 7;
+optional int32 serverId = 8;
+}
+message CommonPVEBossBattleInfo {
+repeated int32 finishTaskList = 1;
+optional int32 count = 2;
+optional bool rewardState = 3;
+optional int32 id = 4;
+optional bool unLock = 5;
+}
+message PveBossRewardRequest {
+optional int32 pveId = 1;
+}
+message PveBossRewardResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message TeamRobotAddResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message ItemCostRequest {
+optional int32 itemId = 1;
+optional int32 itemNum = 2;
+optional ITEM_TYPE itemType = 3;
+optional int32 code = 4;
+}
+message ItemCostResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message PveBossInfo {
+optional int64 MondayZeroTime = 1;
+optional int32 WeekRank = 2;
+}
+message BattleExitRequest {
+optional int64 battleId = 1;
+optional string uid = 2;
+}
+message BattleExitResponse {
+optional int64 battleId = 1;
+optional string uid = 2;
+}
+message ArmyShopInfoRequest {
+}
+message CommonArmyShopInfo {
+optional int32 armyShopId = 1;
+optional int32 remainAmount = 2;
+optional int32 buyNum = 3;
+}
+message ArmyShopInfoResponse {
+repeated CommonArmyShopInfo armyShopInfoList = 1;
+optional int32 armyFunding = 2;
+}
+message ArmyShopPutRequest {
+optional int32 armyShopId = 1;
+optional int32 putNumber = 2;
+}
+message ArmyShopPutResponse {
+repeated CommonArmyShopInfo armyShopInfoList = 1;
+optional int32 armyFunding = 2;
+}
+message TaskInfoRequest {
+}
+message TaskInfoResponse {
+repeated CommonTask list = 1;
+}
+message TaskRewardRequest {
+optional int32 taskId = 1;
+optional int32 selectGiftId = 2;
+}
+message TaskRewardResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message GloryRoadInfoResponse {
+repeated int32 rewardIdList = 1;
+repeated int32 openIdList = 2;
+optional int32 curRankScore = 3;
+optional int32 maxRankScore = 4;
+}
+message GloryRoadRewardRequest {
+optional int32 id = 1;
+}
+message GloryRoadRewardResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message BattleFrameInfo {
+repeated BattleSyncResponse List = 1;
+optional BATTLE_TYPE battleType = 2;
+optional int32 totalTime = 3;
+optional int64 battleId = 4;
+optional int32 mapId = 5;
+repeated BattleFrameUserData userList = 6;
+optional BATTLE_TYPE rankBattleType = 7;
+optional int64 duration = 8;
+}
+message BattleFrameUserData {
+optional BattleData battleData = 1;
+optional bool isRobot = 2;
+optional int32 tid = 3;
+optional string uid = 4;
+optional int32 pos = 5;
+}
+message RankStarUpRequest {
+optional int32 id = 1;
+optional RANK_TYPE rankType = 2;
+}
+message RankStarUpResponse {
+optional CommonUpdate commonUpdate = 1;
+optional int32 RankId = 2;
+optional int32 Rank = 3;
+}
+message ClientDebugRequest {
+optional int64 battleId = 1;
+}
+message ClientDebugResponse {
+optional int32 status = 1;
+optional string urlPath = 2;
+}
+message HeroResetProficiencyRequest {
+optional int32 HeroId = 1;
+}
+message HeroResetProficiencyResponse {
+optional CommonUpdate commonUpdate = 1;
+}
+message CommonHeroTalentInfo {
+repeated CommonHeroTalentInfo_TidMapEntry tidMap = 1;
+repeated int32 useTidList = 2;
+}
+message CommonHeroTalentInfo_TidMapEntry {
+optional int32 key = 1;
+optional int32 value = 2;
+}
+message HeroTalentInfoRequest {
+optional int32 heroId = 1;
+}
+message HeroTalentInfoResponse {
+optional CommonHeroTalentInfo info = 1;
+}
+message HeroTalentUseRequest {
+optional int32 heroId = 1;
+repeated int32 talentTidList = 2;
+}
+message HeroTalentLvUpRequest {
+optional int32 heroId = 1;
+optional int32 tid = 2;
+optional bool isUseCommonTalentChip = 3;
+}
+message HeroTalentLvUpResponse {
+optional CommonUpdate commonUpdate = 2;
+}
+message HeroTalentClearRequest {
+optional int32 heroId = 1;
+}
+message HeroTalentClearResponse {
+optional CommonUpdate commonUpdate = 2;
+}
+message MedalRecycleGetResponse {
+optional CommonUpdate commonUpdate = 2;
+}
+message CommonMedalRecycleInfo {
+optional bool needRecycle = 1;
+optional int32 page = 2;
+repeated CommonMedalRecycleInfo_MedalMapEntry medalMap = 3;
+repeated CommonMedalRecycleInfo_MedalAdornMapEntry medalAdornMap = 4;
+repeated CommonItem addItemList = 5;
+optional int32 skillNum = 6;
+optional int32 ownMedalMoney = 7;
+}
+message CommonMedalRecycleInfo_MedalMapEntry {
+optional int32 key = 1;
+optional int32 value = 2;
+}
+message CommonMedalRecycleInfo_MedalAdornMapEntry {
+optional int32 key = 1;
+optional int32 value = 2;
+}
+message CommonActivityOld2021 {
+optional int64 old2021Unix = 1;
+optional int32 todayAc = 2;
+optional int32 days = 3;
+optional int64 rewardUnix = 4;
+}
+message ActivityOld2021InfoResponse {
+optional CommonActivityOld2021 activityOld2021 = 1;
+}
+message ActivityOld2021GetRequest {
+optional int32 days = 1;
+}
+message ActivityOld2021GetResponse {
+optional int32 days = 1;
+optional CommonUpdate commonUpdate = 2;
+}
+enum MSG {
+MSG_Default = 0;
+MSG_ArmyCreate = 100;
+MSG_ArmyJoin = 101;
+MSG_ArmyExit = 102;
+MSG_ArmyKick = 103;
+MSG_ArmyByKick = 104;
+MSG_ArmyInfo = 105;
+MSG_ArmyList = 106;
+MSG_ArmyUserList = 107;
+MSG_ArmySearch = 108;
+MSG_ArmyRename = 109;
+MSG_ArmyRankIdSet = 110;
+MSG_ArmyCommanderSet = 111;
+MSG_ArmyTransfer = 112;
+MSG_ArmyNoticeSet = 113;
+MSG_ArmyDevoteInfo = 114;
+MSG_ArmyDevoteSend = 115;
+MSG_ArmyDevoteReward = 116;
+MSG_ArmyChatInfoList = 117;
+MSG_ArmyRankList = 118;
+MSG_ArmyRedSend = 119;
+MSG_ArmyRedGet = 120;
+MSG_ArmyRedInfo = 121;
+MSG_ArmySetIconText = 122;
+MSG_SpringDrawInfo = 123;
+MSG_SpringDraw = 124;
+MSG_ArmySignIn = 125;
+MSG_ArmyRedBagList = 126;
+MSG_ArmyWarehouseList = 127;
+MSG_ArmyWarehouseRetrieve = 128;
+MSG_ArmyWarehouseDonate = 129;
+MSG_ArmyBossInfo = 130;
+MSG_ArmyBossUpgrade = 131;
+MSG_ArmyRevengeList = 132;
+MSG_ArmyShopInfo = 133;
+MSG_ArmyShopPut = 134;
+MSG_BattleLogin = 1000;
+MSG_BattleSync = 1001;
+MSG_BattleJoin = 1002;
+MSG_BattleBegin = 1003;
+MSG_BattleFinish = 1004;
+MSG_BattleSelHero = 1005;
+MSG_BattleSelConfirm = 1006;
+MSG_BattleReadyStatus = 1007;
+MSG_BattleLoading = 1008;
+MSG_BattleServerBattleEnd = 1009;
+MSG_BattleHeartbeat = 1010;
+MSG_BattleBan = 1011;
+MSG_BattlePick = 1012;
+MSG_BattlePreReady = 1013;
+MSG_BattleHelp = 1015;
+MSG_BattleBanPickSwitch = 1016;
+MSG_BattleReLogin = 1017;
+MSG_BattleFrameList = 1018;
+MSG_BattleExit = 1019;
+MSG_ClientDebug = 1020;
+MSG_MatchFirst = 2000;
+MSG_TeamExit = 2001;
+MSG_TeamList = 2002;
+MSG_MatchBattleInfo = 2003;
+MSG_TeamBeginMatch = 2004;
+MSG_TeamDelMatch = 2005;
+MSG_TeamRobotAdd = 2006;
+MSG_TeamRobotRemove = 2007;
+MSG_TeamPosChange = 2008;
+MSG_TeamByKick = 2009;
+MSG_TeamReady = 2010;
+MSG_CompetitionV2SignUp = 2011;
+MSG_CompetitionV2Status = 2012;
+MSG_CompetitionV2Exit = 2013;
+MSG_CompetitionV2PlayerUpdate = 2014;
+MSG_CompetitionV2SignUpInfo = 2015;
+MSG_Login = 3000;
+MSG_TeamCreate = 3001;
+MSG_BattleEnd = 3002;
+MSG_HeroBuy = 3003;
+MSG_SkinBuy = 3004;
+MSG_MedalDraw = 3005;
+MSG_MedalBuy = 3006;
+MSG_MedalAdornList = 3007;
+MSG_MedalAdornBuy = 3008;
+MSG_MedalUp = 3009;
+MSG_MedalDown = 3010;
+MSG_MedalOpenPage = 3011;
+MSG_MedalSkillActive = 3014;
+MSG_MedalSkillEquip = 3015;
+MSG_MedalAllDown = 3016;
+MSG_MedalSell = 3017;
+MSG_MedalSellBatch = 3018;
+MSG_OnlineDuration = 3019;
+MSG_ChenMiOffline = 3020;
+MSG_FriendList = 3021;
+MSG_FriendAddList = 3022;
+MSG_FriendApply = 3023;
+MSG_FriendReply = 3024;
+MSG_FriendApplyList = 3025;
+MSG_FriendDelete = 3026;
+MSG_FriendAddSearch = 3027;
+MSG_ArenaSubRankList = 3031;
+MSG_ArenaSubRank = 3032;
+MSG_TeamApply = 3033;
+MSG_TeamByApply = 3034;
+MSG_TeamJoin = 3035;
+MSG_TeamRefuse = 3036;
+MSG_TeamByRefuse = 3037;
+MSG_NameSet = 3038;
+MSG_FCMSet = 3039;
+MSG_KickByRepeatLogin = 3040;
+MSG_RankList = 3041;
+MSG_RecentContactList = 3042;
+MSG_MailList = 3043;
+MSG_MailRead = 3044;
+MSG_MailReward = 3045;
+MSG_MailDel = 3046;
+MSG_BattleStart = 3047;
+MSG_AchievementReward = 3048;
+MSG_AchievementList = 3049;
+MSG_UserInfoBase = 3050;
+MSG_UserInfoBattle = 3051;
+MSG_UserInfoScore = 3052;
+MSG_UserInfoHero = 3053;
+MSG_UserInfoBattleRecord = 3054;
+MSG_ChatSend = 3055;
+MSG_ChatList = 3056;
+MSG_ChatAsyn = 3057;
+MSG_ChatPrivateRecentList = 3058;
+MSG_SignList = 3059;
+MSG_SignReward = 3060;
+MSG_TaskDailyList = 3061;
+MSG_TaskDailyReward = 3062;
+MSG_TaskWeeklyAcReward = 3063;
+MSG_NoticeGet = 3064;
+MSG_GxGet = 3065;
+MSG_ClientError = 3066;
+MSG_HeadImageChange = 3067;
+MSG_SkinEquip = 3068;
+MSG_Heartbeat = 3069;
+MSG_ChatTextCheck = 3070;
+MSG_ExchangeCode = 3071;
+MSG_ItemNumList = 3072;
+MSG_ItemNum = 3073;
+MSG_HeadImageBuy = 3074;
+MSG_HeadBoxChange = 3075;
+MSG_ArmyShopList = 3076;
+MSG_ArmyShopBuy = 3077;
+MSG_ArmyShopRefresh = 3078;
+MSG_ArmyUserOnlineList = 3079;
+MSG_LuckInfo = 3080;
+MSG_LuckStart = 3081;
+MSG_LuckDraw = 3082;
+MSG_LuckRefresh = 3083;
+MSG_LuckBaoKuDraw = 3084;
+MSG_LuckBroadcast = 3085;
+MSG_SkinBuyForFriend = 3086;
+MSG_BattleLike = 3087;
+MSG_BattleReport = 3088;
+MSG_LimitActionList = 3089;
+MSG_ActionConditionList = 3090;
+MSG_ActionConditionAward = 3091;
+MSG_FirstRechargeReward = 3092;
+MSG_VipReward = 3093;
+MSG_VipInfo = 3094;
+MSG_ChatReport = 3095;
+MSG_SuiShopBuy = 3096;
+MSG_ChatBlackList = 3097;
+MSG_ChatBlackListAdd = 3098;
+MSG_ChatBlackListRemove = 3099;
+MSG_VipShowLevelSet = 3100;
+MSG_ChatBoxIdSet = 3101;
+MSG_SeasonInfo = 3102;
+MSG_MonthCardInfo = 3104;
+MSG_MonthCardBuy = 3105;
+MSG_MonthCardBuyForFriend = 3106;
+MSG_MonthCardTakeReward = 3107;
+MSG_HeroLuckInfo = 3108;
+MSG_HeroLuckDraw = 3109;
+MSG_HeroLuckRefresh = 3110;
+MSG_ArmyRequest = 3111;
+MSG_ArmyRequestHelp = 3112;
+MSG_ArmyRequestInfo = 3113;
+MSG_HeroBattleInfo = 3114;
+MSG_HeroBattleReward = 3115;
+MSG_HeroBattleRankList = 3116;
+MSG_ClientJsonGetSuiShop = 3227;
+MSG_LuckItemListConfig = 3228;
+MSG_ClientJsonGetHeroBattle = 3229;
+MSG_BattleDelay = 3230;
+MSG_UserList = 3231;
+MSG_ClientJsonGetQQAward = 3232;
+MSG_QQAwardReceive = 3233;
+MSG_Recharge = 3234;
+MSG_LookBlueVip = 3235;
+MSG_ClientJsonGetLimitDis = 3236;
+MSG_LimitDisBuy = 3237;
+MSG_WeAwardReceive = 3238;
+MSG_ClientJsonGetWeAward = 3239;
+MSG_HeroUpgradeStar = 3240;
+MSG_ReceivePVEAward = 3241;
+MSG_DNDSet = 3242;
+MSG_PVEAwardInfo = 3243;
+MSG_HeroLotteryInfo = 3244;
+MSG_HeroLotteryReward = 3245;
+MSG_LuckyDialInfo = 3246;
+MSG_LuckyDialReward = 3247;
+MSG_HeroUpgradeStarQuick = 3249;
+MSG_MedalRecommend = 3250;
+MSG_MedalRecommendLook = 3251;
+MSG_MedalRecommendLike = 3252;
+MSG_MedalRecommendUnlike = 3253;
+MSG_MedalRecommendFirst = 3254;
+MSG_MedalPageBind = 3255;
+MSG_MedalBatchPrice = 3256;
+MSG_AchievementLevelAward = 3257;
+MSG_AchievementLevelList = 3258;
+MSG_ClientJsonGetLuckRecharge = 3259;
+MSG_LuckRechargeRewardTake = 3260;
+MSG_LuckRechargeNotifyClose = 3261;
+MSG_CostSurprisesInfo = 3263;
+MSG_CostSurprisesAward = 3264;
+MSG_FeatureTimeNotify = 3265;
+MSG_MysteryStoreInfo = 3266;
+MSG_MysteryStoreDis = 3267;
+MSG_CrystalDraw = 3268;
+MSG_OfficialInfo = 3269;
+MSG_UpOfficial = 3270;
+MSG_OfficialAward = 3271;
+MSG_LevelAwardList = 3275;
+MSG_LevelAward = 3276;
+MSG_SignTotalReward = 3277;
+MSG_ActionBoxSlotOpen = 3278;
+MSG_ActionBoxPutInSlot = 3279;
+MSG_ActionBoxOpen = 3280;
+MSG_CompetitionFinalNotifyInfo = 3281;
+MSG_CompetitionMatchMap = 3282;
+MSG_GotoCompetitionFinal = 3283;
+MSG_CompetitionBattleInfo = 3284;
+MSG_CompetitionBetInfo = 3285;
+MSG_CompetitionBet = 3286;
+MSG_CompetitionRandHero = 3287;
+MSG_CompetitionRankList = 3288;
+MSG_InviteInvitorRewardInfo = 3289;
+MSG_InviteCodeInvitor = 3290;
+MSG_InviteRechargeBackInfo = 3291;
+MSG_InviteInviteeRewardInfo = 3292;
+MSG_InviteInviteeRewardTake = 3293;
+MSG_InviteInvitorRewardLoginTake = 3294;
+MSG_InviteInvitorRewardBackNumTake = 3295;
+MSG_InviteInviteeBindInvitorRewardTake = 3296;
+MSG_InviteRechargeBackTake = 3297;
+MSG_InviteCodeBind = 3298;
+MSG_CompetitionWinNotify = 3299;
+MSG_CrystalShopInfo = 3300;
+MSG_CrystalShopFresh = 3301;
+MSG_CrystalShopBuy = 3302;
+MSG_GrabRedPacketInfo = 3303;
+MSG_GrabRedPacket = 3304;
+MSG_GrabRedPacketShare = 3305;
+MSG_LuckTreeInfo = 3306;
+MSG_LuckTreeUseWater = 3307;
+MSG_LuckTreeSignIn = 3308;
+MSG_LuckTreeGetAward = 3309;
+MSG_LuckTreeRank = 3310;
+MSG_ArmyTaskList = 3311;
+MSG_ArmyTaskReward = 3312;
+MSG_ArmyTaskWeeklyAcReward = 3313;
+MSG_ArmyPlunderResurrectInfo = 3314;
+MSG_ArmyPlunderResurrect = 3315;
+MSG_ArmyPlunderRewardRestNum = 3316;
+MSG_BattleBoxInfo = 3317;
+MSG_BattleBoxSlotOpen = 3318;
+MSG_BattleBoxIntoSlot = 3319;
+MSG_BattleBoxAward = 3320;
+MSG_BattleBoxDelete = 3321;
+MSG_ChessboardDiceInfo = 3322;
+MSG_ChessboardDiceDo = 3323;
+MSG_ChessboardDiceAward = 3324;
+MSG_BattleTypeInfo = 3325;
+MSG_HonorScoreQuery = 3326;
+MSG_HonorScoreLogQuery = 3327;
+MSG_VipStoneInfo = 3328;
+MSG_VipStoneBuy = 3329;
+MSG_VipStoneRewardTake = 3330;
+MSG_HeroYUANStarBagBuy = 3331;
+MSG_HeroYUANStarBag = 3332;
+MSG_DoubleBuffNotify = 3333;
+MSG_FriendShopBuy = 3334;
+MSG_FriendSendCoin = 3335;
+MSG_FriendShopInfo = 3336;
+MSG_FriendApplyRelation = 3337;
+MSG_FriendDeleteRelation = 3338;
+MSG_FriendConfirmRefuseRelationship = 3339;
+MSG_FriendReplyRelation = 3340;
+MSG_LimitBoxInfo = 3341;
+MSG_LimitBoxBuy = 3342;
+MSG_LimitBoxGet = 3343;
+MSG_FriendRelationList = 3344;
+MSG_PassportInfo = 3345;
+MSG_PassportBuyLevel = 3346;
+MSG_PassportPromotion = 3347;
+MSG_PassportPromotionForFriend = 3348;
+MSG_PassportLvAwardQuickGet = 3349;
+MSG_PassportShopInfo = 3350;
+MSG_PassportShopBuy = 3351;
+MSG_PassportTaskList = 3352;
+MSG_PassportGradeGet = 3353;
+MSG_AnniversaryInfo = 3354;
+MSG_AnniversaryDaysAward = 3355;
+MSG_AnniversaryDrawAward = 3356;
+MSG_ArrowDrawInfo = 3357;
+MSG_ArrowDraw = 3358;
+MSG_HeroExclusiveExchange = 3360;
+MSG_BattleBubbleEquip = 3361;
+MSG_BattleBubbleSale = 3362;
+MSG_BattleBubbleUse = 3363;
+MSG_BattleBubbleList = 3364;
+MSG_HeadBoxBuy = 3365;
+MSG_ChatBoxBuy = 3366;
+MSG_OnePayInfo = 3367;
+MSG_OnePayBuy = 3368;
+MSG_MysteryStoreLog = 3369;
+MSG_EveryChargeInfo = 3370;
+MSG_EveryChargeAward = 3371;
+MSG_FourHeroGiftBuy = 3372;
+MSG_FourHeroGiftNotify = 3373;
+MSG_EasyConvert = 3374;
+MSG_EventDataInfo = 3375;
+MSG_EventDraw = 3376;
+MSG_EventTaskTake = 3377;
+MSG_EventNoticeLog = 3378;
+MSG_BattleLikeByRobot = 3379;
+MSG_BattleLikeNotice = 3380;
+MSG_BattleBubbleBuy = 3381;
+MSG_ChenMiGiftAward = 3382;
+MSG_EmoticonBuy = 3383;
+MSG_EventNoviceInfo = 3384;
+MSG_EventNoviceAward = 3385;
+MSG_ChipFuseConvert = 3386;
+MSG_ChipFuseNoticeLog = 3387;
+MSG_ChipFuseInfo = 3388;
+MSG_HourlyActivityInfo = 3389;
+MSG_HourlyActivityAward = 3390;
+MSG_SeasonShopInfo = 3391;
+MSG_SeasonShopBuy = 3392;
+MSG_CompetitionV2AwardStatus = 3393;
+MSG_CompetitionV2Award = 3394;
+MSG_ChatBan = 3395;
+MSG_AstrologyInfo = 3396;
+MSG_AstrologyAward = 3397;
+MSG_AstrologySetInfo = 3398;
+MSG_AstrologyExchange = 3399;
+MSG_HeroAwakeLevelUp = 3400;
+MSG_StoreBuyInfo = 3401;
+MSG_StoreBuy = 3402;
+MSG_FirstRechargeV2Info = 3403;
+MSG_FirstRechargeV2Award = 3404;
+MSG_FriendHeroPageInfo = 3405;
+MSG_FriendHeroSet = 3406;
+MSG_FriendHeroBorrow = 3407;
+MSG_FriendHeroInfo = 3408;
+MSG_FriendPartnerApply = 3409;
+MSG_FriendPartnerReply = 3410;
+MSG_FriendPartnerApplyList = 3411;
+MSG_FriendPartnerDelete = 3412;
+MSG_FriendTaskList = 3413;
+MSG_FriendTaskReward = 3414;
+MSG_BoxAward = 3415;
+MSG_PveBossPageInfo = 3416;
+MSG_PveBossReward = 3417;
+MSG_ItemCost = 3418;
+MSG_TaskInfo = 3419;
+MSG_TaskReward = 3420;
+MSG_GloryRoadInfo = 3421;
+MSG_GloryRoadReward = 3422;
+MSG_RankStarUp = 3423;
+MSG_HeroResetProficiency = 3424;
+MSG_HeroTalentInfo = 3428;
+MSG_HeroTalentUse = 3425;
+MSG_HeroTalentLvUp = 3426;
+MSG_HeroTalentClear = 3427;
+MSG_MedalRecycleGet = 3429;
+MSG_ActivityOld2021Info = 3430;
+MSG_ActivityOld2021Get = 3431;
+}
+enum BATTLE_STATUS {
+BATTLE_STATUS_SEL = 0;
+BATTLE_STATUS_SEL_SKIN = 1;
+BATTLE_STATUS_LOADING = 2;
+BATTLE_STATUS_BEGIN = 3;
+BATTLE_STATUS_END = 4;
+}
+enum BATTLE_BAN_PICK_STATUS {
+BATTLE_BAN_PICK_STATUS_BAN = 0;
+BATTLE_BAN_PICK_STATUS_PICK = 1;
+BATTLE_BAN_PICK_STATUS_PER_READY = 2;
+BATTLE_BAN_PICK_STATUS_DEFAULT_VIEW = 3;
+}
+enum TEAM_TYPE {
+TEAM_TYPE_NORMAL__ = 0;
+TEAM_TYPE_DIY = 1;
+}
+enum BATTLE_TYPE {
+BATTLE_TYPE_ALL = 0;
+BATTLE_TYPE_FIVE_VS_FIVE = 1;
+BATTLE_TYPE_ONE_VS_ALL = 2;
+BATTLE_TYPE_ONE_VS_ONE = 3;
+BATTLE_TYPE_RANK_BATTLE = 4;
+BATTLE_TYPE_STRONG_HOLD = 5;
+BATTLE_TYPE_CARRY_FLAG = 6;
+BATTLE_TYPE_DESTROY = 7;
+BATTLE_TYPE_SURVIVAL = 8;
+BATTLE_TYPE_ORE_CAR = 9;
+BATTLE_TYPE_BOSS = 10;
+BATTLE_TYPE_MAX_RANK = 11;
+BATTLE_TYPE_PROTECT = 12;
+BATTLE_TYPE_MATCH = 13;
+BATTLE_TYPE_CLONE = 14;
+BATTLE_TYPE_SPECIAL_TASK = 15;
+BATTLE_TYPE_COMPETITION = 16;
+BATTLE_TYPE_PLUNDER = 17;
+BATTLE_TYPE_HERO_CHALLENGE = 18;
+BATTLE_TYPE_ESCAPE = 20;
+BATTLE_TYPE_COMPETITION_V2 = 21;
+BATTLE_TYPE_GEM_WAR = 22;
+BATTLE_TYPE_PVE_BOSS_BATTLE = 23;
+BATTLE_TYPE_DEFEND_NEW_YEAR_GOODS = 24;
+BATTLE_TYPE_TRAINING_CAMP = 101;
+}
+enum ITEM_TYPE {
+ITEM_TYPE_NONE = 0;
+ITEM_TYPE_COIN = 1;
+ITEM_TYPE_GOLD = 2;
+ITEM_TYPE_EXP = 3;
+ITEM_TYPE_MEDAL_MONEY = 4;
+ITEM_TYPE_HERO = 5;
+ITEM_TYPE_SKIN = 6;
+ITEM_TYPE_HERO_TEST = 7;
+ITEM_TYPE_MEDAL_BAG = 8;
+ITEM_TYPE_MEDAL_ID = 9;
+ITEM_TYPE_DIAM = 10;
+ITEM_TYPE_GIFT = 11;
+ITEM_TYPE_SUIPIAN = 12;
+ITEM_TYPE_ITEM = 13;
+ITEM_TYPE_RANK_SCORE = 14;
+ITEM_TYPE_MAX_RANK_SCORE = 15;
+ITEM_TYPE_HEAD_BOX_ID = 16;
+ITEM_TYPE_SKIN_TEST = 17;
+ITEM_TYPE_HERO_TEST_DAY = 18;
+ITEM_TYPE_HEAD_IMAGE = 19;
+ITEM_TYPE_HERO_FREE = 20;
+ITEM_TYPE_MONTH_CARD = 21;
+ITEM_TYPE_HERO_CRYSTAL = 22;
+ITEM_TYPE_CHANGE_NAME_CARD = 25;
+ITEM_TYPE_ARMY_CHANGE_NAME_CARD = 26;
+ITEM_TYPE_LA_BA = 27;
+ITEM_TYPE_RESURRECT_COIN = 28;
+ITEM_TYPE_CHESSBOARD_DICE = 34;
+ITEM_TYPE_BATTLE_BUBBLE = 36;
+ITEM_TYPE_CHAT_BOX_ID = 37;
+ITEM_TYPE_EMOTICON = 38;
+ITEM_TYPE_HERO_CHIP = 41;
+ITEM_TYPE_ARMY_FOUNDING = 42;
+ITEM_TYPE_TALENT_CHIP = 43;
+ITEM_TYPE_ItemTypeArmyCreate = 10001;
+ITEM_TYPE_ItemTypeArmyDonate = 10002;
+ITEM_TYPE_ItemTypeArmyRename = 10003;
+ITEM_TYPE_ItemTypeLimitBoxSlot = 10004;
+ITEM_TYPE_ItemTypeLimitBoxOpen = 10005;
+ITEM_TYPE_ItemTypeGenBossChallenge = 10006;
+ITEM_TYPE_ItemTypeArmyBossRelive = 10007;
+ITEM_TYPE_ItemTypeBattleBoxOpen = 10008;
+ITEM_TYPE_ItemTypeRandHero = 10009;
+ITEM_TYPE_ItemTypeCrystalShopRefresh = 10010;
+ITEM_TYPE_ItemTypeLuckRefresh = 10011;
+ITEM_TYPE_ItemTypeMedalAdorn = 10012;
+ITEM_TYPE_ItemTypeMedalDraw = 10013;
+ITEM_TYPE_ItemTypeMedalPage = 10014;
+ITEM_TYPE_ItemTypeSaleAll = 10015;
+ITEM_TYPE_ItemTypeScienceMuseum = 10016;
+ITEM_TYPE_ItemTypeRename = 10017;
+ITEM_TYPE_ItemTypeVipStone = 10018;
+ITEM_TYPE_ItemTypeHeroAwakeUp = 10019;
+ITEM_TYPE_ItemTypeHeroStar = 10020;
+ITEM_TYPE_ItemTypeLimitBoxBuy = 10021;
+ITEM_TYPE_ItemTypeIncreaseOfficial = 10022;
+ITEM_TYPE_ItemTypePassportLevel = 10023;
+ITEM_TYPE_ItemTypePassportPromotion = 10024;
+ITEM_TYPE_ItemTypeLuckRechargeAward = 10025;
+ITEM_TYPE_ItemTypeOnePay = 10026;
+}
+enum SHOP_TYPE {
+SHOP_TYPE_SHOP_NORMAL = 0;
+SHOP_TYPE_SHOP_MYSTERY = 1;
+SHOP_TYPE_SHOP_DISCOUNT = 2;
+SHOP_TYPE_SHOP_FIRST_RECHARGE_LIMIT = 3;
+}
+enum RANK_TYPE {
+RANK_TYPE_NONE_ = 0;
+RANK_TYPE_SCORE = 1;
+RANK_TYPE_MVP = 2;
+RANK_TYPE_KILL = 3;
+RANK_TYPE_LEGENDARY = 4;
+RANK_TYPE_RATE = 5;
+RANK_TYPE_MAXSCORE = 6;
+RANK_TYPE_REDBAG = 7;
+RANK_TYPE_HERO_PROFICIENCY = 8;
+RANK_TYPE_RATE_SUB = 9;
+RANK_TYPE_MASTERPOINT = 10;
+RANK_TYPE_ARMY = 11;
+RANK_TYPE_HERO_BATTLE = 15;
+RANK_TYPE_PVE = 16;
+RANK_TYPE_MEDAL_RECOMMEND = 17;
+RANK_TYPE_ACHIEVEMENT_LV = 18;
+RANK_TYPE_COMPETITION_SCORE = 19;
+RANK_TYPE_LUCK_TREE = 20;
+RANK_TYPE_FRIEND_INTIMACY = 21;
+RANK_TYPE_PVE_BOSS_TIME = 22;
+}
+enum ONLINE_STATUS {
+ONLINE_STATUS_OFFLINE = 0;
+ONLINE_STATUS_ONLINE = 1;
+ONLINE_STATUS_TEAMING = 2;
+ONLINE_STATUS_BATTLEING = 3;
+}
+enum BATTLE_RESULT_TYPE {
+BATTLE_RESULT_TYPE_cs = 0;
+BATTLE_RESULT_TYPE_sl = 1;
+BATTLE_RESULT_TYPE_dq = 2;
+BATTLE_RESULT_TYPE_sr = 3;
+BATTLE_RESULT_TYPE_sw = 4;
+BATTLE_RESULT_TYPE_tk = 5;
+BATTLE_RESULT_TYPE_ss = 6;
+BATTLE_RESULT_TYPE_jd = 7;
+BATTLE_RESULT_TYPE_db = 8;
+BATTLE_RESULT_TYPE_sj = 9;
+BATTLE_RESULT_TYPE_kc = 10;
+BATTLE_RESULT_TYPE_zg = 11;
+}
+enum CHAT_Type {
+CHAT_Type_WORLD = 0;
+CHAT_Type_PRIVATE = 1;
+CHAT_Type_TEAM = 2;
+CHAT_Type_BATTLEING_ = 3;
+CHAT_Type_ARMY_ = 4;
+CHAT_Type_REPORT_NAME = 5;
+CHAT_Type_REPORT_ARMY_NAME = 6;
+}
+enum CHAT_INFO_TYPE {
+CHAT_INFO_TYPE_NORMAL_ = 0;
+CHAT_INFO_TYPE_SYSTEM = 1;
+CHAT_INFO_TYPE_RED_BAG = 2;
+CHAT_INFO_TYPE_ARMY_SYSTEM = 3;
+CHAT_INFO_TYPE_ARMY_REQUEST = 4;
+CHAT_INFO_TYPE_TEAM_APPLY = 5;
+}
+enum HORN_Type {
+HORN_Type_NORMAL = 0;
+HORN_Type_SILVER_HORN = 1;
+HORN_Type_GOLD_HORN = 2;
+}
+enum CHAT_ARMY_TYPE {
+CHAT_ARMY_TYPE_JOIN = 0;
+CHAT_ARMY_TYPE_EXIT = 1;
+CHAT_ARMY_TYPE_KICK = 2;
+CHAT_ARMY_TYPE_DEVOTE = 3;
+CHAT_ARMY_TYPE_SIGN_IN = 4;
+CHAT_ARMY_TYPE_PLUNDER_ = 5;
+CHAT_ARMY_TYPE_WAREHOUSE_DONATE = 6;
+CHAT_ARMY_TYPE_FIRST_RED = 7;
+}
+enum NOTICE_KEY {
+NOTICE_KEY_MAIL = 0;
+NOTICE_KEY_ACHIEVEMENT = 1;
+NOTICE_KEY_TASK_DAILY = 2;
+NOTICE_KEY_SIGN = 3;
+NOTICE_KEY_FRIEND_APPLY = 4;
+NOTICE_KEY_LUCK = 5;
+NOTICE_KEY_VIP = 6;
+NOTICE_KEY_ACTION = 7;
+NOTICE_KEY_QQ_NORMAL = 8;
+NOTICE_KEY_QQ_BLUE_VIP = 9;
+NOTICE_KEY_WE_AWARD = 10;
+NOTICE_KEY_LUCK_RECHARGE = 11;
+NOTICE_KEY_ARMY_TASK = 12;
+NOTICE_KEY_BATTLE_BOX = 13;
+NOTICE_KEY_CHESSBOARD = 14;
+NOTICE_KEY_VIP_STONE_NOTICE = 15;
+NOTICE_KEY_ARMY_SIGN_IN = 16;
+NOTICE_KEY_ARMY_WEEK_DEVOTE_BOX = 17;
+NOTICE_KEY_RELATION_APPLY = 18;
+NOTICE_KEY_PASSPORT_LV = 19;
+NOTICE_KEY_LIMIT_BOX_NEW_USER = 20;
+NOTICE_KEY_ANNIVERSARY_NOTICE = 21;
+NOTICE_KEY_EVERY_CHARGE = 22;
+NOTICE_KEY_ARMY_INFO = 23;
+NOTICE_KEY_EVENT_NOVICE = 24;
+NOTICE_KEY_NOTICE_REVEL_ENCORE = 25;
+NOTICE_KEY_EVENT_NOVICE_LIMIT_TASK = 26;
+NOTICE_KEY_ASTROLOGY = 27;
+NOTICE_KEY_FRIEND_PARTNER_APPLY = 28;
+NOTICE_KEY_FRIEND_TASK = 29;
+NOTICE_KEY_FRIEND_HERO_SET = 30;
+NOTICE_KEY_PVE_TASK = 31;
+NOTICE_KEY_GLORY_ROAD = 32;
+}
+enum ARMY_RED_TYPE {
+ARMY_RED_TYPE_COIN_RED = 0;
+ARMY_RED_TYPE_GOLD_RED = 1;
+}
+enum ARMY_RED_GET_STATE {
+ARMY_RED_GET_STATE_ALEADY_GET = 0;
+ARMY_RED_GET_STATE_ALEADY_FINISH = 1;
+ARMY_RED_GET_STATE_GET_NUM_LIMIT = 2;
+}
+enum BLUE_VIP_TYPE {
+BLUE_VIP_TYPE_COMMON = 0;
+BLUE_VIP_TYPE_BLUE_VIP = 1;
+BLUE_VIP_TYPE_SUPER_BLUE_VIP = 2;
+}
+enum EXCLUSIVE_AWARD_TYPE {
+EXCLUSIVE_AWARD_TYPE_EXCLUSIVE_AWARD_NONE = 0;
+EXCLUSIVE_AWARD_TYPE_NEWBIE = 1;
+EXCLUSIVE_AWARD_TYPE_DAILY = 2;
+EXCLUSIVE_AWARD_TYPE_LEVEL = 3;
+}
+enum EXCLUSIVE_AWARD_TAKE_TYPE {
+EXCLUSIVE_AWARD_TAKE_TYPE_NON_TAKE = 0;
+EXCLUSIVE_AWARD_TAKE_TYPE_TAKE = 1;
+EXCLUSIVE_AWARD_TAKE_TYPE_CAN_TAKE = 2;
+}
+enum BAN_PICK_SWITCH_TYPE {
+BAN_PICK_SWITCH_TYPE_WANT_BAN = 0;
+BAN_PICK_SWITCH_TYPE_BAN_ = 1;
+BAN_PICK_SWITCH_TYPE_PICK_ = 2;
+BAN_PICK_SWITCH_TYPE_WANT_PICK = 3;
+}
+enum FEATURE_TIME_KEY {
+FEATURE_TIME_KEY_FEATURE_TIME_NONE = 0;
+FEATURE_TIME_KEY_LUCK_DIAL = 1;
+FEATURE_TIME_KEY_LIMIT_DIS = 2;
+FEATURE_TIME_KEY_COST_SURPRISES = 3;
+FEATURE_TIME_KEY_MYSTERY_STORE = 4;
+FEATURE_TIME_KEY_OLD_INVITE = 5;
+FEATURE_TIME_KEY_LUCK_TREE_TIME = 6;
+FEATURE_TIME_KEY_GRAB_RED_PACK = 7;
+FEATURE_TIME_KEY_SPRING_DRAW = 8;
+FEATURE_TIME_KEY_CHESSBOARD_DRAW = 9;
+FEATURE_TIME_KEY_VIP_STONE = 10;
+FEATURE_TIME_KEY_VIP_DOUBLE_BUFF = 11;
+FEATURE_TIME_KEY_LIMIT_RECHARGE_BOX = 19;
+FEATURE_TIME_KEY_ANNIVERSARY = 20;
+FEATURE_TIME_KEY_ARROW_DRAW = 21;
+FEATURE_TIME_KEY_EVERY_CHARGE_ACTION = 22;
+FEATURE_TIME_KEY_DOUBLE_SEVENTH_FESTIVAL = 23;
+FEATURE_TIME_KEY_CARNIVAL_FESTIVAL = 24;
+FEATURE_TIME_KEY_ZHONGYUAN_FESTIVAL = 25;
+FEATURE_TIME_KEY_LVBU_FESTIVAL = 26;
+FEATURE_TIME_KEY_SEARCH_NOTICE = 27;
+FEATURE_TIME_KEY_MID_AUTUMN = 28;
+FEATURE_TIME_KEY_NATIONAL_DAY = 29;
+FEATURE_TIME_KEY_CHECK_GARBAGE = 30;
+FEATURE_TIME_KEY_HALLOWEEN = 31;
+FEATURE_TIME_KEY_DOUBLE_ELEVEN = 32;
+FEATURE_TIME_KEY_REVEL_ENCORE = 33;
+FEATURE_TIME_KEY_THANKSGIVING_DAY = 34;
+FEATURE_TIME_KEY_ROULETTE = 35;
+FEATURE_TIME_KEY_BIG_STOMACH_KING = 36;
+FEATURE_TIME_KEY_CHRISTMAS = 37;
+FEATURE_TIME_KEY_NEW_YEAR = 38;
+FEATURE_TIME_KEY_LA_BA_FESTIVAL = 39;
+FEATURE_TIME_KEY_END_OF_PERIOD_WISH = 40;
+FEATURE_TIME_KEY_CHINESE_NEW_YEAR_LIST = 41;
+FEATURE_TIME_KEY_CHINESE_NEW_YEAR_42 = 42;
+FEATURE_TIME_KEY_CHINESE_NEW_YEAR_43 = 43;
+FEATURE_TIME_KEY_CHINESE_NEW_YEAR_44 = 44;
+FEATURE_TIME_KEY_CHINESE_NEW_YEAR_45 = 45;
+FEATURE_TIME_KEY_CHINESE_NEW_YEAR_46 = 46;
+FEATURE_TIME_KEY_LANTERN_FESTIVAL = 47;
+FEATURE_TIME_KEY_VALENTINE_DAY = 48;
+FEATURE_TIME_KEY_DRAGON_LOOKING_UP = 49;
+FEATURE_TIME_KEY_BIG_STOMACH_KING_V2 = 50;
+FEATURE_TIME_KEY_WOMEN_S_DAY = 51;
+FEATURE_TIME_KEY_FENGSHEN = 52;
+FEATURE_TIME_KEY_SEEK_MEDICAL_ADVICE = 53;
+FEATURE_TIME_KEY_LUO_ZI_WU_HUI = 54;
+FEATURE_TIME_KEY_SUPER_DOLL_MACHINE = 55;
+FEATURE_TIME_KEY_HONG_MEI_AO_GU = 56;
+FEATURE_TIME_KEY_LONG_YUE_YE_TAN = 57;
+FEATURE_TIME_KEY_SEARCH_NOTICE_v2 = 58;
+FEATURE_TIME_KEY_HUA_ZHA_QING_YUAN = 59;
+FEATURE_TIME_KEY_HUAI_JIN_WO_YU = 60;
+FEATURE_TIME_KEY_WHELL_OF_FURTUNE = 61;
+FEATURE_TIME_KEY_LATE_CONFESSION = 62;
+FEATURE_TIME_KEY_CANDY_FIGHT = 63;
+FEATURE_TIME_KEY_XIAO_YAO_YOU = 64;
+FEATURE_TIME_KEY_ZONG_QING_DAN_ZHOU = 65;
+FEATURE_TIME_KEY_WANG_DE_SHENG_YAN = 66;
+FEATURE_TIME_KEY_ZHOU_NIAN_QING = 67;
+FEATURE_TIME_KEY_ZHOU_NIAN_QING_GUAN_CAN_HAI = 68;
+FEATURE_TIME_KEY_ZHOU_NIAN_QING_BAI_PIAO = 69;
+FEATURE_TIME_KEY_ZHOU_NIAN_QING_FANG_CHANG = 70;
+FEATURE_TIME_KEY_QING_MEI_ZHE_JIU = 71;
+FEATURE_TIME_KEY_ZHOU_NIAN_QING_WAN_HUI = 72;
+FEATURE_TIME_KEY_ACTIVITY_ID_73 = 73;
+FEATURE_TIME_KEY_DOUBLE_SEVENTH_FESTIVAL_2020 = 74;
+FEATURE_TIME_KEY_ACTIVITY_ID_75 = 75;
+FEATURE_TIME_KEY_ACTIVITY_ID_76 = 76;
+FEATURE_TIME_KEY_ACTIVITY_ID_77 = 77;
+FEATURE_TIME_KEY_ACTIVITY_ID_78 = 78;
+FEATURE_TIME_KEY_ACTIVITY_ID_79 = 79;
+FEATURE_TIME_KEY_ACTIVITY_ID_80 = 80;
+FEATURE_TIME_KEY_ACTIVITY_ID_81 = 81;
+FEATURE_TIME_KEY_ACTIVITY_ID_82 = 82;
+FEATURE_TIME_KEY_ACTIVITY_ID_83 = 83;
+FEATURE_TIME_KEY_ACTIVITY_ID_84 = 84;
+FEATURE_TIME_KEY_ACTIVITY_ID_85 = 85;
+FEATURE_TIME_KEY_ACTIVITY_ID_86 = 86;
+FEATURE_TIME_KEY_ACTIVITY_ID_87 = 87;
+FEATURE_TIME_KEY_ACTIVITY_ID_88 = 88;
+FEATURE_TIME_KEY_ACTIVITY_ID_89 = 89;
+FEATURE_TIME_KEY_ACTIVITY_ID_90 = 90;
+FEATURE_TIME_KEY_ACTIVITY_ID_91 = 91;
+FEATURE_TIME_KEY_ACTIVITY_ID_92 = 92;
+FEATURE_TIME_KEY_ACTIVITY_ID_93 = 93;
+FEATURE_TIME_KEY_ACTIVITY_ID_94 = 94;
+FEATURE_TIME_KEY_ACTIVITY_ID_95 = 95;
+FEATURE_TIME_KEY_ACTIVITY_ID_96 = 96;
+FEATURE_TIME_KEY_ACTIVITY_ID_97 = 97;
+FEATURE_TIME_KEY_ACTIVITY_ID_98 = 98;
+FEATURE_TIME_KEY_ACTIVITY_ID_99 = 99;
+FEATURE_TIME_KEY_ACTIVITY_ID_100 = 100;
+FEATURE_TIME_KEY_ACTIVITY_ID_101 = 101;
+FEATURE_TIME_KEY_ACTIVITY_ID_102 = 102;
+FEATURE_TIME_KEY_ACTIVITY_ID_103 = 103;
+FEATURE_TIME_KEY_ACTIVITY_ID_104 = 104;
+FEATURE_TIME_KEY_ACTIVITY_ID_105 = 105;
+FEATURE_TIME_KEY_ACTIVITY_ID_106 = 106;
+FEATURE_TIME_KEY_ACTIVITY_ID_107 = 107;
+FEATURE_TIME_KEY_ACTIVITY_ID_108 = 108;
+FEATURE_TIME_KEY_ACTIVITY_ID_109 = 109;
+FEATURE_TIME_KEY_ACTIVITY_ID_110 = 110;
+FEATURE_TIME_KEY_ACTIVITY_ID_111 = 111;
+FEATURE_TIME_KEY_ACTIVITY_ID_112 = 112;
+FEATURE_TIME_KEY_ACTIVITY_ID_113 = 113;
+FEATURE_TIME_KEY_ACTIVITY_ID_114 = 114;
+FEATURE_TIME_KEY_ACTIVITY_ID_115 = 115;
+FEATURE_TIME_KEY_ACTIVITY_ID_116 = 116;
+FEATURE_TIME_KEY_ACTIVITY_ID_117 = 117;
+FEATURE_TIME_KEY_ACTIVITY_ID_118 = 118;
+FEATURE_TIME_KEY_ACTIVITY_ID_119 = 119;
+FEATURE_TIME_KEY_ACTIVITY_ID_120 = 120;
+FEATURE_TIME_KEY_ACTIVITY_ID_121 = 121;
+FEATURE_TIME_KEY_ACTIVITY_ID_122 = 122;
+FEATURE_TIME_KEY_ACTIVITY_ID_123 = 123;
+FEATURE_TIME_KEY_ACTIVITY_ID_124 = 124;
+FEATURE_TIME_KEY_ACTIVITY_ID_125 = 125;
+FEATURE_TIME_KEY_ACTIVITY_ID_126 = 126;
+FEATURE_TIME_KEY_ACTIVITY_ID_127 = 127;
+FEATURE_TIME_KEY_ACTIVITY_ID_128 = 128;
+FEATURE_TIME_KEY_ACTIVITY_ID_129 = 129;
+FEATURE_TIME_KEY_ACTIVITY_ID_130 = 130;
+FEATURE_TIME_KEY_ACTIVITY_ID_131 = 131;
+FEATURE_TIME_KEY_ACTIVITY_ID_132 = 132;
+FEATURE_TIME_KEY_ACTIVITY_ID_133 = 133;
+FEATURE_TIME_KEY_ACTIVITY_ID_134 = 134;
+FEATURE_TIME_KEY_ACTIVITY_ID_135 = 135;
+FEATURE_TIME_KEY_ACTIVITY_ID_136 = 136;
+FEATURE_TIME_KEY_ACTIVITY_ID_137 = 137;
+FEATURE_TIME_KEY_ACTIVITY_ID_138 = 138;
+FEATURE_TIME_KEY_ACTIVITY_ID_139 = 139;
+FEATURE_TIME_KEY_ACTIVITY_ID_140 = 140;
+FEATURE_TIME_KEY_ACTIVITY_ID_141 = 141;
+FEATURE_TIME_KEY_ACTIVITY_ID_142 = 142;
+FEATURE_TIME_KEY_ACTIVITY_ID_143 = 143;
+FEATURE_TIME_KEY_ACTIVITY_ID_144 = 144;
+FEATURE_TIME_KEY_ACTIVITY_ID_145 = 145;
+FEATURE_TIME_KEY_ACTIVITY_ID_146 = 146;
+FEATURE_TIME_KEY_ACTIVITY_ID_147 = 147;
+FEATURE_TIME_KEY_ACTIVITY_ID_148 = 148;
+FEATURE_TIME_KEY_ACTIVITY_ID_149 = 149;
+FEATURE_TIME_KEY_ACTIVITY_ID_150 = 150;
+FEATURE_TIME_KEY_ACTIVITY_ID_151 = 151;
+FEATURE_TIME_KEY_ACTIVITY_ID_152 = 152;
+FEATURE_TIME_KEY_ACTIVITY_ID_153 = 153;
+FEATURE_TIME_KEY_ACTIVITY_ID_154 = 154;
+FEATURE_TIME_KEY_ACTIVITY_ID_155 = 155;
+FEATURE_TIME_KEY_ACTIVITY_ID_156 = 156;
+FEATURE_TIME_KEY_ACTIVITY_ID_157 = 157;
+FEATURE_TIME_KEY_ACTIVITY_ID_158 = 158;
+FEATURE_TIME_KEY_ACTIVITY_ID_159 = 159;
+FEATURE_TIME_KEY_ACTIVITY_ID_160 = 160;
+FEATURE_TIME_KEY_ACTIVITY_ID_161 = 161;
+FEATURE_TIME_KEY_ACTIVITY_ID_162 = 162;
+FEATURE_TIME_KEY_ACTIVITY_ID_163 = 163;
+FEATURE_TIME_KEY_ACTIVITY_ID_164 = 164;
+FEATURE_TIME_KEY_ACTIVITY_ID_165 = 165;
+FEATURE_TIME_KEY_ACTIVITY_ID_166 = 166;
+FEATURE_TIME_KEY_ACTIVITY_ID_167 = 167;
+FEATURE_TIME_KEY_ACTIVITY_ID_168 = 168;
+FEATURE_TIME_KEY_ACTIVITY_ID_169 = 169;
+FEATURE_TIME_KEY_ACTIVITY_ID_170 = 170;
+FEATURE_TIME_KEY_ACTIVITY_ID_171 = 171;
+FEATURE_TIME_KEY_ACTIVITY_ID_172 = 172;
+FEATURE_TIME_KEY_ACTIVITY_ID_173 = 173;
+FEATURE_TIME_KEY_ACTIVITY_ID_174 = 174;
+FEATURE_TIME_KEY_ACTIVITY_ID_175 = 175;
+FEATURE_TIME_KEY_ACTIVITY_ID_176 = 176;
+FEATURE_TIME_KEY_ACTIVITY_ID_177 = 177;
+FEATURE_TIME_KEY_ACTIVITY_ID_178 = 178;
+FEATURE_TIME_KEY_ACTIVITY_ID_179 = 179;
+FEATURE_TIME_KEY_ACTIVITY_ID_180 = 180;
+FEATURE_TIME_KEY_ACTIVITY_ID_181 = 181;
+FEATURE_TIME_KEY_ACTIVITY_ID_182 = 182;
+FEATURE_TIME_KEY_ACTIVITY_ID_183 = 183;
+FEATURE_TIME_KEY_ACTIVITY_ID_184 = 184;
+FEATURE_TIME_KEY_ACTIVITY_ID_185 = 185;
+FEATURE_TIME_KEY_ACTIVITY_ID_186 = 186;
+FEATURE_TIME_KEY_ACTIVITY_ID_187 = 187;
+FEATURE_TIME_KEY_ACTIVITY_ID_188 = 188;
+FEATURE_TIME_KEY_ACTIVITY_ID_189 = 189;
+FEATURE_TIME_KEY_HOURLY_ACTIVITY = 1000;
+FEATURE_TIME_KEY_ASTROLOGY_ACTIVITY = 1001;
+FEATURE_TIME_KEY_RANK_STAR_ITEM = 1002;
+FEATURE_TIME_KEY_HERO_LOTTERY = 99999;
+FEATURE_TIME_KEY_CRYSTAL_DRAW = 99998;
+}
+enum COST_SURPRISES_TYPE {
+COST_SURPRISES_TYPE_NOO = 0;
+COST_SURPRISES_TYPE_HERO_TYPE = 1;
+COST_SURPRISES_TYPE_SKIN_TYPE = 2;
+}
+enum INVITE_TASK_TYPE {
+INVITE_TASK_TYPE_INVITE_TASK_NONE = 0;
+INVITE_TASK_TYPE_LOGIN = 1;
+INVITE_TASK_TYPE_FIRST_WIN = 2;
+INVITE_TASK_TYPE_TEAM_BATTLE = 3;
+}
+enum LOTTERY_TYPE {
+LOTTERY_TYPE_DRAW_HERO = 0;
+LOTTERY_TYPE_DRAW_SKIN = 1;
+}
+enum ARMY_WAREHOUSE_FROM_TYPE {
+ARMY_WAREHOUSE_FROM_TYPE_FROM_PLAYER = 0;
+ARMY_WAREHOUSE_FROM_TYPE_FROM_PLUNDER = 1;
+ARMY_WAREHOUSE_FROM_TYPE_FROM_DEVOTE_RANK = 2;
+}

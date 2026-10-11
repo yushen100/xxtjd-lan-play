@@ -1,0 +1,30 @@
+{
+  "real_multi_machine_verified": false,
+  "formal_server_restarted": false,
+  "packages": {
+    "full": {
+      "parts": 26,
+      "bytes": 782554276,
+      "files": 1023,
+      "sha256_verified": true,
+      "excluded_credentials_logs_databases": true,
+      "friend_dependencies_present": true
+    },
+    "friend": {
+      "parts": 26,
+      "bytes": 769757947,
+      "files": 824,
+      "sha256_verified": true,
+      "excluded_credentials_logs_databases": true,
+      "friend_dependencies_present": true
+    }
+  },
+  "clean_extraction_status": "passed",
+  "full_regression_status": "17_groups_passed",
+  "full_repeated_startup_status": "passed",
+  "friend_isolated_patch_status": "passed",
+  "friend_game_window_verified": false,
+  "full_isolated_patch_status": "passed",
+  "regression_evidence": "drafts/1011_联机发布_v4_正式候选/验收_full/memory/1011_验收执行_v1/20261011_230908/1011_结果_v1.json",
+  "startup_evidence": "memory/1011_v4隔离启动验收_v1.json"
+}
